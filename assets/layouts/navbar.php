@@ -11,7 +11,7 @@
 
 
             <div class="container">
-                <a class="navbar-brand" href="../home">
+                <a class="navbar-brand" href="../">
 
                     <?php if (!isset($_SESSION['auth'])) { ?>
                         <img src="../assets/images/logonotext.png" alt="" width="50" height="50" class="mr-3">
@@ -46,7 +46,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="../contact">Contact Us</a>
                             </li>
-                            
+
                             <li class="nav-item">
                                 <a class="nav-link" href="../login">Login</a>
                             </li>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>keedos official</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
     <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -14,13 +15,26 @@
 <body>
     <div class="login-clean" style="background: rgb(255,255,255);"><a class="btn btn-primary" role="button" style="background: url(&quot;assets/img/Back.svg&quot;) left no-repeat;margin-left: 50px;border-style: none;border-top-style: none;border-right-color: rgb(255,255,255);border-left-color: rgb(255,255,255);" href="index.html"></a>
         <form method="post" style="border-color: rgb(255,255,255);">
-            <h2 class="sr-only">Login Form</h2>
-            <div class="illustration"><strong style="padding: 15px;">註冊</strong></div>
-            <div class="form-group"><input class="form-control" type="email" name="username" placeholder="帳號" autofocus="" style="border-radius: 16px;"></div>
+            <div class="illustration"><strong style="padding: 15px;text-align: center;">註冊</strong></div>
+            <div class="form-group"><input class="form-control" type="email" name="username" placeholder="帳號" autofocus="" style="border-radius: 16px;text-align: left;"></div>
             <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" inputmode="email" style="border-radius: 16px;"></div>
             <div class="form-group"><input class="form-control" type="password" name="password" placeholder="密碼" inputmode="verbatim" style="border-radius: 16px;"></div>
             <div class="form-group"><input class="form-control" type="password" name="confirm-password" placeholder="確認密碼" inputmode="verbatim" style="border-radius: 16px;"></div>
-            <div class="form-group" style="padding-left: 30px;"><button class="btn btn-primary btn-block" type="submit" style="text-align: center;border-radius: 40px;font-family: Poppins;background: #f08b33;font-family: Poppins;font-style: normal;font-weight: 600;font-size: 14px;line-height: 24px;align-items: center;text-align: center;letter-spacing: 0.75px;color: #ffffff;width: 184px;height: 40px;">繼續</button></div><a class="forgot" href="#">Forgot your email or password?</a>
+            <div class="form-group">
+                <div class="form-row" style="text-align: center;margin: 0px;opacity: 1;">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                    <div class="col" style="padding: 0px;padding-right: 0px;"><button class="btn btn-primary btn-block" type="submit" style="text-align: center;border-radius: 40px;font-family: Poppins;background: #f08b33;font-family: Poppins;font-style: normal;font-weight: 600;font-size: 14px;line-height: 24px;align-items: center;text-align: center;letter-spacing: 0.75px;color: #ffffff;width: 184px;height: 40px;">繼續</button></div>
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col"><a class="forgot" href="login.html">註冊過了?</a></div>
+                <div class="col"><a class="forgot" href="reset-password.html">忘記密碼?</a></div>
+            </div>
         </form>
     </div>
     <script src="assets/js/jquery.min.js"></script>

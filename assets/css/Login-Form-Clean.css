@@ -19,6 +19,8 @@
   color: 14142B;
   font-size: 32px;
   padding-bottom: 30px;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 .login-clean form .btn-primary {

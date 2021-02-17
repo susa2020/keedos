@@ -1,4 +1,3 @@
-
 <?php
 
 define('TITLE', "Login");
@@ -6,121 +5,85 @@ include '../assets/layouts/header.php';
 check_logged_out();
 ?>
 
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>keedos</title>
+    <title>keedos official</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="../assets/fonts/simple-line-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-    <link rel="stylesheet" href="../assets/css/Navigation-with-Search.css">
-    <link rel="stylesheet" href="../assets/css/smoothproducts.css">
+    <link rel="stylesheet" href="../assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="../assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 
 <body>
-    <section class="clean-block clean-form dark">
-        <div class="container">
-            <div class="block-heading">
-                <h2 class="text-info">登入</h2>
-                <p>歡迎回來!</p>
+    <div class="login-clean" style="background: rgb(255,255,255);"><a class="btn btn-primary" role="button" style="background: url(&quot;assets/img/Back.svg&quot;) left no-repeat;margin-left: 50px;border-style: none;border-top-style: none;border-right-color: rgb(255,255,255);border-left-color: rgb(255,255,255);" href="index.html"></a>
+        <form method="post" action="includes/login.inc.php" style="border-color: rgb(255,255,255);">
+
+            <?php insert_csrf_token(); ?>
+
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration"><strong style="padding: 15px;">登入</strong></div>
+
+            <small class="text-success font-weight-bold">
+                <?php
+                    if (isset($_SESSION['STATUS']['loginstatus']))
+                        echo $_SESSION['STATUS']['loginstatus'];
+
+                ?>
+            </small>
+
+            <div class="form-group">
+              <input class="form-control" type="text" id="username" name="username" placeholder="帳號" autofocus="" style="border-radius: 16px;">
+              <sub class="text-danger">
+                  <?php
+                      if (isset($_SESSION['ERRORS']['nouser']))
+                          echo $_SESSION['ERRORS']['nouser'];
+                  ?>
+              </sub>
             </div>
-            <form action="includes/login.inc.php" method="post">
 
-                <?php insert_csrf_token(); ?>
+            <div class="form-group">
+              <input class="form-control" type="password" id="password" name="password" placeholder="密碼" inputmode="verbatim" style="border-radius: 16px;">
+              <sub class="text-danger">
+                  <?php
+                      if (isset($_SESSION['ERRORS']['wrongpassword']))
+                          echo $_SESSION['ERRORS']['wrongpassword'];
+                  ?>
+              </sub>
+            </div>
 
-                <div class="text-info">
-                    <small class="text-success font-weight-bold">
-                        <?php
-                            if (isset($_SESSION['STATUS']['loginstatus']))
-                                echo $_SESSION['STATUS']['loginstatus'];
+            <div class="form-group">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="rememberme" name="rememberme"/>
+                <label class="form-check-label" for="checkbox">記住我</label>
+              </div>
+            </div>
 
-                        ?>
-                    </small>
-                </div>
-
-                <div class="form-group">
-                  <label for="username" class="sr-only">Username</label>
-                  <input type="text" id="username" name="username" class="form-control item" placeholder="Username" required autofocus>
-                  <sub class="text-danger">
-                      <?php
-                          if (isset($_SESSION['ERRORS']['nouser']))
-                              echo $_SESSION['ERRORS']['nouser'];
-                      ?>
-                  </sub>
-                </div>
-                <div class="form-group">
-                  <label for="password" class="sr-only">Password</label>
-                  <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
-                  <sub class="text-danger">
-                      <?php
-                          if (isset($_SESSION['ERRORS']['wrongpassword']))
-                              echo $_SESSION['ERRORS']['wrongpassword'];
-                      ?>
-                  </sub>
-                </div>
-                <div class="form-group">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="rememberme" name="rememberme">
-                      <label class="custom-control-label" for="rememberme">Remember me</label>
+            <div class="form-group">
+                <div class="form-row" style="text-align: center;margin: 0px;opacity: 1;">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                    <div class="col" style="padding: 0px;padding-right: 0px;">
+                      <button class="btn btn-primary btn-block" type="submit" value="loginsubmit" name="loginsubmit" style="text-align: center;border-radius: 40px;font-family: Poppins;background: #f08b33;font-family: Poppins;font-style: normal;font-weight: 600;font-size: 14px;line-height: 24px;align-items: center;text-align: center;letter-spacing: 0.75px;color: #ffffff;width: 184px;height: 40px;">登入</button>
+                    </div>
+                    <div class="col">
+                        <p></p>
                     </div>
                 </div>
-                <button class="btn btn-primary btn-block" type="submit" value="loginsubmit" name="loginsubmit" >Log In</button>
-            </form>
-            <div class="block-heading">
-                <h2 class="text-info"></h2>
             </div>
-        </div>
-    </section>
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
-                    <h5>Get started</h5>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Downloads</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>About us</h5>
-                    <ul>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Support</h5>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Legal</h5>
-                    <ul>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
+            <div class="form-row">
+                <div class="col"><a class="forgot" href="register.html">沒有帳號?</a></div>
+                <div class="col"><a class="forgot" href="reset-password.html">忘記密碼?</a></div>
             </div>
-        </div>
-        <div class="footer-copyright">
-            <p>© 2021 Copyright Text</p>
-        </div>
-    </footer>
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-    <script src="../assets/js/smoothproducts.min.js"></script>
-    <script src="../assets/js/theme.js"></script>
+        </form>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
