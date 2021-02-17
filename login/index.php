@@ -12,13 +12,13 @@ check_logged_out();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>keedos</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
-    <link rel="stylesheet" href="assets/css/smoothproducts.css">
+    <link rel="stylesheet" href="../assets/css/Navigation-with-Search.css">
+    <link rel="stylesheet" href="../assets/css/smoothproducts.css">
 </head>
 
 <body>
@@ -44,7 +44,7 @@ check_logged_out();
 
                 <div class="form-group">
                   <label for="username" class="sr-only">Username</label>
-                  <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+                  <input type="text" id="username" name="username" class="form-control item" placeholder="Username" required autofocus>
                   <sub class="text-danger">
                       <?php
                           if (isset($_SESSION['ERRORS']['nouser']))
@@ -64,7 +64,7 @@ check_logged_out();
                 </div>
                 <div class="form-group">
                     <div class="form-check">
-                      <input type="checkbox" class="custom-control-input" id="rememberme" name="rememberme">
+                      <input type="checkbox" class="form-check-input" id="rememberme" name="rememberme">
                       <label class="custom-control-label" for="rememberme">Remember me</label>
                     </div>
                 </div>
@@ -116,11 +116,11 @@ check_logged_out();
             <p>© 2021 Copyright Text</p>
         </div>
     </footer>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-    <script src="assets/js/smoothproducts.min.js"></script>
-    <script src="assets/js/theme.js"></script>
+    <script src="../assets/js/smoothproducts.min.js"></script>
+    <script src="../assets/js/theme.js"></script>
 </body>
 
 </html>

@@ -25,20 +25,18 @@ check_remember_me();
     <meta name="description" content="<?php echo APP_DESCRIPTION;  ?>">
     <meta name="author" content="<?php echo APP_OWNER;  ?>">
 
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
-    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="../assets/fonts/simple-line-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-    <link rel="stylesheet" href="../assets/css/Navigation-with-Search.css">
-    <link rel="stylesheet" href="../assets/css/smoothproducts.css">
-
-
     <title><?php echo TITLE . ' | ' . APP_NAME; ?></title>
     <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+
+    <link rel="stylesheet" href="../assets/vendor/bootstrap-4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendor/fontawesome-5.12.0/css/all.min.css">
+ 
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href="custom.css" >
 
 </head>
 
 <body>
 
-      <?php require 'navbar.php'; ?>
+    <?php require 'navbar.php'; ?>
