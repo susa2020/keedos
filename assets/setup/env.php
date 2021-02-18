@@ -18,3 +18,5 @@ if (!defined('MAIL_USERNAME'))                  define('MAIL_USERNAME', 'groupsu
 if (!defined('MAIL_PASSWORD'))                  define('MAIL_PASSWORD', 'susasusa');
 if (!defined('MAIL_ENCRYPTION'))                define('MAIL_ENCRYPTION', 'ssl');
 if (!defined('MAIL_PORT'))                      define('MAIL_PORT', 465);
+
+?>

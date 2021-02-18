@@ -1,12 +1,52 @@
-<?php
+<!DOCTYPE html>
+<html>
 
-if (isset($_SESSION['auth'])) {
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>keedos official</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!--<link rel="import" href="./navbar.html">-->
+     <script src="jquery.js"></script> 
+    <script> 
+    $(function(){
+      $("#includedContent").load("navbar.html"); 
+    });
+    </script> 
+</head>
 
-    header("Location: home");
-    exit();
-}
-else {
+<body>
+    <?php
+    if (isset($_SESSION['auth'])) {
+        header("Location: home");
+        exit();
+    }
+    else {
+        header("Location: login");
+        exit();
+    }
 
-    header("Location: login");
-    exit();
-}
+    <!--
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand" href="#">&nbsp;Keedos&nbsp;</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">關於我們</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">如何開始</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Link 3</a></li>
+                </ul>
+                <form class="form-inline mr-auto" target="_self">
+                    <div class="form-group"><label for="search-field"></label></div>
+                </form><i class="fa fa-search" style="margin: 5px;"></i><input type="search" id="search-field" class="search-field" name="search" style="border-top-left-radius: 15px;border-top-right-radius: 15px;border-bottom-right-radius: 15px;border-bottom-left-radius: 15px;border-width: 2px;border-style: solid;padding: 1px;margin: 5px;"><a class="btn btn-light action-button" role="button" href="login" style="margin: 3px;">登入</a><a class="btn btn-light action-button" role="button" href="register.html" style="margin: 3px;">註冊</a>
+            </div>
+        </div>
+    </nav>
+    -->
+    <?php include("navbar.php"); ?> <!--Bug-->
+</body>
+
+</html>
