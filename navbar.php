@@ -20,7 +20,7 @@
                     
                 </form><i class="fa fa-search" style="margin: 5px;"></i><input type="search" id="search-field" class="search-field" name="search" style="border-top-left-radius: 15px;border-top-right-radius: 15px;border-bottom-right-radius: 15px;border-bottom-left-radius: 15px;border-width: 2px;border-style: solid;padding: 1px;margin: 5px;">
                 <?php 
-                        if(isset($_SESSION['auth'])){
+                        if(!isset($_SESSION['auth'])){
                            echo '<a class="btn btn-light action-button" role="button" href="login" style="margin: 3px;">後台</a>'; 
                         }
                         else {
