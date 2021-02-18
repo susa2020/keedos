@@ -29,7 +29,7 @@ check_logged_out();
 
 
 
-            <div class="illustration"><strong style="padding: 15px;text-align: center;">註冊</strong></div>
+            <div class="illustration"><strong style="padding: 15px;text-align: center;font-family:FakePearl-Regular;">註冊</strong></div>
 
             <div class="text-center mb-3">
                 <small class="text-success font-weight-bold">
@@ -94,7 +94,7 @@ check_logged_out();
             </div>
 
 
-    
+
 
             <div class="form-row">
                 <div class="col"><a class="forgot" href="login.html">註冊過了?</a></div>
