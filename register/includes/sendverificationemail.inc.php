@@ -14,7 +14,7 @@ if (isset($_POST['signupsubmit'])) {
 
     $selector = bin2hex(random_bytes(8));
     $token = random_bytes(32);
-    $url = "localhost/loginsystem/verify/includes/verify.inc.php?selector=" . $selector . "&validator=" . bin2hex($token);
+    $url = "keedos.secretfile.i234.me/verify/includes/verify.inc.php?selector=" . $selector . "&validator=" . bin2hex($token);
     $expires = 'DATE_ADD(NOW(), INTERVAL 1 HOUR)';
 
 
@@ -33,7 +33,7 @@ if (isset($_POST['signupsubmit'])) {
     }
 
 
-    $sql = "INSERT INTO auth_tokens (user_email, auth_type, selector, token, expires_at) 
+    $sql = "INSERT INTO auth_tokens (user_email, auth_type, selector, token, expires_at)
             VALUES (?, 'account_verify', ?, ?, " . $expires . ");";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -43,7 +43,7 @@ if (isset($_POST['signupsubmit'])) {
         exit();
     }
     else {
-        
+
         $hashedToken = password_hash($token, PASSWORD_DEFAULT);
         mysqli_stmt_bind_param($stmt, "sss", $email, $selector, $hashedToken);
         mysqli_stmt_execute($stmt);
@@ -56,7 +56,7 @@ if (isset($_POST['signupsubmit'])) {
 
     $to = $email;
     $subject = 'Verify Your Account';
-    
+
     /*
     * -------------------------------------------------------------------------------
     *   Using email template
@@ -73,7 +73,7 @@ if (isset($_POST['signupsubmit'])) {
     $message = file_get_contents("./template_verificationemail.php");
 
     foreach($mail_variables as $key => $value) {
-        
+
         $message = str_replace('{{ '.$key.' }}', $value, $message);
     }
 
@@ -98,15 +98,15 @@ if (isset($_POST['signupsubmit'])) {
         $mail->Body    = $message;
 
         $mail->send();
-    } 
+    }
     catch (Exception $e) {
 
-        
+
     }
 
     /*
     * ------------------------------------------------------------
-    *   Script Endpoint 
+    *   Script Endpoint
     * ------------------------------------------------------------
     */
 }

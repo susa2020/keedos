@@ -7,155 +7,108 @@ check_logged_out();
 ?>
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
+<!DOCTYPE html>
+<html>
 
-        </div>
-        <div class="col-lg-4">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>keedos official</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="../assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
 
-            <form class="form-auth" action="includes/register.inc.php" method="post" enctype="multipart/form-data">
+<body>
+    <div class="login-clean" style="background: rgb(255,255,255);"><a class="btn btn-primary" role="button" style="background: url(&quot;../assets/img/Back.svg&quot;) left no-repeat;margin-left: 50px;border-style: none;border-top-style: none;border-right-color: rgb(255,255,255);border-left-color: rgb(255,255,255);" href="index.html"></a>
+        <form class="form-auth" action="includes/register.inc.php" method="post" enctype="multipart/form-data" style="border-color: rgb(255,255,255);">
 
-                <?php insert_csrf_token(); ?>
+            <?php insert_csrf_token(); ?>
 
-                <div class="picCard text-center">
-                    <div class="avatar-upload">
-                        <div class="avatar-preview text-center">
-                            <div id="imagePreview" style="background-image: url( ../assets/uploads/users/_defaultUser.png );"></div>
-                        </div>
-                        <div class="avatar-edit">
-                            <input name='avatar' id="avatar" class="fas fa-pencil" type='file' />
-                            <label for="avatar"></label>
-                        </div>
+
+
+            <div class="illustration"><strong style="padding: 15px;text-align: center;">註冊</strong></div>
+
+            <div class="text-center mb-3">
+                <small class="text-success font-weight-bold">
+                    <?php
+                        if (isset($_SESSION['STATUS']['signupstatus']))
+                            echo $_SESSION['STATUS']['signupstatus'];
+
+                    ?>
+                </small>
+            </div>
+
+            <div class="form-group">
+              <input class="form-control" type="text" id="username" name="username" placeholder="帳號" required autofocus="" style="border-radius: 16px;text-align: left;">
+              <sub class="text-danger">
+                  <?php
+                      if (isset($_SESSION['ERRORS']['usernameerror']))
+                          echo $_SESSION['ERRORS']['usernameerror'];
+
+                  ?>
+              </sub>
+            </div>
+
+            <div class="form-group">
+              <input class="form-control" type="email" id="email" name="email" placeholder="Email" inputmode="email" required style="border-radius: 16px;">
+              <sub class="text-danger">
+                  <?php
+                      if (isset($_SESSION['ERRORS']['emailerror']))
+                          echo $_SESSION['ERRORS']['emailerror'];
+
+                  ?>
+              </sub>
+            </div>
+
+            <div class="form-group">
+              <input class="form-control" type="password" id="password" name="password" placeholder="密碼" inputmode="verbatim" required style="border-radius: 16px;">
+            </div>
+
+            <div class="form-group">
+              <input class="form-control" type="password" id="confirmpassword" name="confirmpassword" placeholder="確認密碼" inputmode="verbatim" required style="border-radius: 16px;">
+              <sub class="text-danger mb-4">
+                  <?php
+                      if (isset($_SESSION['ERRORS']['passworderror']))
+                          echo $_SESSION['ERRORS']['passworderror'];
+
+                  ?>
+              </sub>
+            </div>
+            <div class="form-group">
+                <div class="form-row" style="text-align: center;margin: 0px;opacity: 1;">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                    <div class="col" style="padding: 0px;padding-right: 0px;">
+                    <button class="btn btn-primary btn-block" type="submit" value="signupsubmit" name='signupsubmit' style="text-align: center;border-radius: 40px;font-family: Poppins;background: #f08b33;font-family: Poppins;font-style: normal;font-weight: 600;font-size: 14px;line-height: 24px;align-items: center;text-align: center;letter-spacing: 0.75px;color: #ffffff;width: 184px;height: 40px;">
+                        繼續</button>
+
+                    </div>
+                    <div class="col">
+                        <p></p>
                     </div>
                 </div>
-                <div class="text-center">
-                    <sub class="text-danger">
-                        <?php
-                            if (isset($_SESSION['ERRORS']['imageerror']))
-                                echo $_SESSION['ERRORS']['imageerror'];
+            </div>
 
-                        ?>
-                    </sub>
-                </div>
 
-                <h6 class="h3 mt-3 mb-3 font-weight-normal text-muted text-center">Create an Account</h6>
+    
 
-                <div class="text-center mb-3">
-                    <small class="text-success font-weight-bold">
-                        <?php
-                            if (isset($_SESSION['STATUS']['signupstatus']))
-                                echo $_SESSION['STATUS']['signupstatus'];
-
-                        ?>
-                    </small>
-                </div>
-
-                <div class="form-group">
-                    <label for="username" class="sr-only">Username</label>
-                    <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
-                    <sub class="text-danger">
-                        <?php
-                            if (isset($_SESSION['ERRORS']['usernameerror']))
-                                echo $_SESSION['ERRORS']['usernameerror'];
-
-                        ?>
-                    </sub>
-                </div>
-
-                <div class="form-group">
-                    <label for="email" class="sr-only">Email address</label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required autofocus>
-                    <sub class="text-danger">
-                        <?php
-                            if (isset($_SESSION['ERRORS']['emailerror']))
-                                echo $_SESSION['ERRORS']['emailerror'];
-
-                        ?>
-                    </sub>
-                </div>
-
-                <div class="form-group">
-                    <label for="password" class="sr-only">Password</label>
-                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
-                </div>
-
-                <div class="form-group mb-4">
-                    <label for="confirmpassword" class="sr-only">Confirm Password</label>
-                    <input type="password" id="confirmpassword" name="confirmpassword" class="form-control" placeholder="Confirm Password" required>
-                    <sub class="text-danger mb-4">
-                        <?php
-                            if (isset($_SESSION['ERRORS']['passworderror']))
-                                echo $_SESSION['ERRORS']['passworderror'];
-
-                        ?>
-                    </sub>
-                </div>
-
-                <hr>
-                <span class="h5 mb-3 font-weight-normal text-muted text-center">Optional</span>
-                <br><br>
-
-                <div class="form-group">
-                    <label for="first_name" class="sr-only">First Name</label>
-                    <input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name">
-                </div>
-
-                <div class="form-group">
-                    <label for="last_name" class="sr-only">Last Name</label>
-                    <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Last Name">
-                </div>
-
-                <div class="form-group mt-4">
-                    <label for="headline" class="sr-only">Headline</label>
-                    <input type="text" id="headline" name="headline" class="form-control" placeholder="headline">
-                </div>
-
-                <div class="form-group">
-                    <label for="bio" class="sr-only">Profile Details</label>
-                    <textarea type="text" id="bio" name="bio" class="form-control" placeholder="Tell us about yourself..."></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label>Gender</label>
-
-                    <div class="custom-control custom-radio custom-control">
-                        <input type="radio" id="male" name="gender" class="custom-control-input" value="m">
-                        <label class="custom-control-label" for="male">Male</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control">
-                        <input type="radio" id="female" name="gender" class="custom-control-input" value="f">
-                        <label class="custom-control-label" for="female">Female</label>
-                    </div>
-                </div>
-
-                <button class="btn btn-lg btn-primary btn-block" type="submit" name='signupsubmit'>Signup</button>
-
-                <p class="mt-4 mb-3 text-muted text-center">
-                    <a href="https://github.com/msaad1999/PHP-Login-System" target="_blank">
-                        Login System
-                    </a> | 
-                    <a href="https://github.com/msaad1999/PHP-Login-System/blob/master/LICENSE" target="_blank">
-                        MIT License
-                    </a>
-                </p>
-
-            </form>
-
-        </div>
-        <div class="col-md-4">
-
-        </div>
+            <div class="form-row">
+                <div class="col"><a class="forgot" href="login.html">註冊過了?</a></div>
+                <div class="col"><a class="forgot" href="reset-password.html">忘記密碼?</a></div>
+            </div>
+        </form>
     </div>
-</div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
 
 
-
-<?php
-
-include '../assets/layouts/footer.php'
-
-?>
 
 <script type="text/javascript">
     function readURL(input) {
