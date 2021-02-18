@@ -46,7 +46,7 @@ if (isset($_POST['resentsend'])) {
 
     $selector = bin2hex(random_bytes(8));
     $token = random_bytes(32);
-    $url = "localhost/loginsystem/reset-password/?selector=" . $selector . "&validator=" . bin2hex($token);
+    $url = "keedos.secretfile.i234.me/reset-password/?selector=" . $selector . "&validator=" . bin2hex($token);
     $expires = 'DATE_ADD(NOW(), INTERVAL 1 HOUR)';
 
     $email = $_POST['email'];
@@ -89,7 +89,7 @@ if (isset($_POST['resentsend'])) {
     }
 
 
-    $sql = "INSERT INTO auth_tokens (user_email, auth_type, selector, token, expires_at) 
+    $sql = "INSERT INTO auth_tokens (user_email, auth_type, selector, token, expires_at)
             VALUES (?, 'password_reset', ?, ?, " . $expires . ");";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -99,7 +99,7 @@ if (isset($_POST['resentsend'])) {
         exit();
     }
     else {
-        
+
         $hashedToken = password_hash($token, PASSWORD_DEFAULT);
         mysqli_stmt_bind_param($stmt, "sss", $email, $selector, $hashedToken);
         mysqli_stmt_execute($stmt);
@@ -111,7 +111,7 @@ if (isset($_POST['resentsend'])) {
 
     $to = $email;
     $subject = 'Reset Your Password';
-    
+
     /*
     * -------------------------------------------------------------------------------
     *   Using email template
@@ -127,7 +127,7 @@ if (isset($_POST['resentsend'])) {
     $message = file_get_contents("./template_passwordresetemail.php");
 
     foreach($mail_variables as $key => $value) {
-        
+
         $message = str_replace('{{ '.$key.' }}', $value, $message);
     }
 
@@ -151,7 +151,7 @@ if (isset($_POST['resentsend'])) {
         $mail->Body    = $message;
 
         $mail->send();
-    } 
+    }
     catch (Exception $e) {
 
         // for public use

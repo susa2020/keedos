@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/styles.css"></head>
 <body>
  <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-        <div class="container"><a class="navbar-brand" href="#">&nbsp;Keedos&nbsp;</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand" href="../index">&nbsp;Keedos&nbsp;</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav">
                     <li class="nav-item"><a class="nav-link active" href="#">關於我們</a></li>
@@ -28,6 +28,7 @@
                       <?php }else{ ?>
 
                             <a class="btn btn-light action-button" role="button" href="../login" style="margin: 3px;">後台</a>
+                            <a class="btn btn-light action-button" role="button" href="../logout" style="margin: 3px;">登出</a>
 
                       <?php } ?>
 
