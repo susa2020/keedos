@@ -1,93 +1,39 @@
-    <?php if (!isset($_SESSION['auth'])) { ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/styles.css"></head>
+<body>
+ <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand" href="#">&nbsp;Keedos&nbsp;</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">關於我們</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">如何開始</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Link 3</a></li>
+                </ul>
+                <form class="form-inline mr-auto" target="_self">
+                    <div class="form-group"><label for="search-field"></label></div>
 
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm p-2">
-
-        <?php } else { ?>
-
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm p-2">
-
-
-            <?php } ?>
-
-
-            <div class="container">
-                <a class="navbar-brand" href="../">
-
-                    <?php if (!isset($_SESSION['auth'])) { ?>
-                        <img src="../assets/images/logonotext.png" alt="" width="50" height="50" class="mr-3">
-                    <?php } else { ?>
-                        <img src="../assets/images/logonotextwhite.png" alt="" width="50" height="50" class="mr-3">
-                    <?php } ?>
-
-                    <?php echo APP_NAME; ?>
-
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                </form><i class="fa fa-search" style="margin: 5px;"></i><input type="search" id="search-field" class="search-field" name="search" style="border-top-left-radius: 15px;border-top-right-radius: 15px;border-bottom-right-radius: 15px;border-bottom-left-radius: 15px;border-width: 2px;border-style: solid;padding: 1px;margin: 5px;">
 
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../welcome">Welcome</a>
-                        </li>
-
-                        <?php if (!isset($_SESSION['auth'])) { ?>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="../contact">Contact Us</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="../login">Login</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="../register">Signup</a>
-                            </li>
-
-                        <?php } else { ?>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="../dashboard">Dashboard</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="../home">Home</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="../contact">Contact Us</a>
-                            </li>
-
-                            <div class="dropdown">
-                                <button class="btn btn-dark dropdown-toggle" type="button" id="imgdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img class="navbar-img" src="../assets/uploads/users/<?php echo $_SESSION['profile_image'] ?>">
-                                    <span class="caret"></span>
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="imgdropdown">
-                                    <a class="dropdown-item text-muted" href="../profile"><i class="fa fa-user pr-2"></i> Profile</a>
-                                    <a class="dropdown-item text-muted" href="../profile-edit"><i class="fa fa-pencil-alt pr-2"></i> Edit Profile</a>
-                                    <a class="dropdown-item text-muted" href="../logout"><i class="fa fa-running pr-2"></i> Logout</a>
-                                </div>
-                            </div>
-
-                        <?php } ?>
+                      <?php if (!isset($_SESSION['auth'])) { ?>
+                            <a class="btn btn-light action-button" role="button" href="login" style="margin: 3px;">後台</a>
 
 
+                      <?php } else { ?>
+                            <a class="btn btn-light action-button" role="button" href="login" style="margin: 3px;">登入</a><a class="btn btn-light action-button" role="button" href="register.html" style="margin: 3px;">註冊</a>
+                            
+
+                      <?php } ?>
 
 
-
-                    </ul>
-                </div>
             </div>
-            </nav>
+        </div>
+    </nav>
+</body>
+</html>

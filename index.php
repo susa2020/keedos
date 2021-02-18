@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <?php include("navbar.php"); ?> <!--Bug-->
+    <?php include("/assets/layouts/header.php"); ?> <!--Bug-->
     
     
 </body>
