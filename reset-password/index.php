@@ -24,7 +24,7 @@ check_logged_out();
 <body>
 
     <?php if (isset($_GET['selector']) && isset($_GET['validator'])) { ?>
-      <div class="login-clean" style="background: rgb(255,255,255);"><a class="btn btn-primary" role="button" style="background: url(&quot;assets/img/Back.svg&quot;) left no-repeat;margin-left: 50px;border-style: none;border-top-style: none;border-right-color: rgb(255,255,255);border-left-color: rgb(255,255,255);" href="login.html"></a>
+      <div class="login-clean" style="background: rgb(255,255,255);"><a class="btn btn-primary" role="button" style="background: url(&quot;../assets/img/Back.svg&quot;) left no-repeat;margin-left: 50px;border-style: none;border-top-style: none;border-right-color: rgb(255,255,255);border-left-color: rgb(255,255,255);" href="../login"></a>
         <form method="post" style="border-color: rgb(255,255,255);">
 
           <?php
@@ -86,7 +86,7 @@ check_logged_out();
         </div>
 
       <?php } else { ?>
-        <div class="login-clean" style="background: rgb(255,255,255);"><a class="btn btn-primary" role="button" style="background: url(&quot;assets/img/Back.svg&quot;) left no-repeat;margin-left: 50px;border-style: none;border-top-style: none;border-right-color: rgb(255,255,255);border-left-color: rgb(255,255,255);" href="login.html"></a>
+        <div class="login-clean" style="background: rgb(255,255,255);"><a class="btn btn-primary" role="button" style="background: url(&quot;../assets/img/Back.svg&quot;) left no-repeat;margin-left: 50px;border-style: none;border-top-style: none;border-right-color: rgb(255,255,255);border-left-color: rgb(255,255,255);" href="../login"></a>
           <form method="post" style="border-color: rgb(255,255,255);">
 
             <?php insert_csrf_token(); ?>
