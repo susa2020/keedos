@@ -22,7 +22,7 @@ check_logged_out();
 </head>
 
 <body>
-    <div class="login-clean" style="background: rgb(255,255,255);"><a class="btn btn-primary" role="button" style="background: url(&quot;../assets/img/Back.svg&quot;) left no-repeat;margin-left: 50px;border-style: none;border-top-style: none;border-right-color: rgb(255,255,255);border-left-color: rgb(255,255,255);" href="index.html"></a>
+    <div class="login-clean" style="background: rgb(255,255,255);"><a class="btn btn-primary" role="button" style="background: url(&quot;../assets/img/Back.svg&quot;) left no-repeat;margin-left: 50px;border-style: none;border-top-style: none;border-right-color: rgb(255,255,255);border-left-color: rgb(255,255,255);" href="../index.php"></a>
         <form class="form-auth" action="includes/register.inc.php" method="post" enctype="multipart/form-data" style="border-color: rgb(255,255,255);">
 
             <?php insert_csrf_token(); ?>
@@ -97,8 +97,8 @@ check_logged_out();
 
 
             <div class="form-row">
-                <div class="col"><a class="forgot" href="login.html">註冊過了?</a></div>
-                <div class="col"><a class="forgot" href="reset-password.html">忘記密碼?</a></div>
+                <div class="col"><a class="forgot" href="../login">註冊過了?</a></div>
+                <div class="col"><a class="forgot" href="../reset-password">忘記密碼?</a></div>
             </div>
         </form>
     </div>

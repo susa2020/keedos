@@ -68,7 +68,7 @@ check_logged_out();
                         <p class="mt-4 mb-3 text-muted text-center">
                             <a href="https://github.com/msaad1999/PHP-Login-System" target="_blank">
                                 Login System
-                            </a> |
+                            </a> | 
                             <a href="https://github.com/msaad1999/PHP-Login-System/blob/master/LICENSE" target="_blank">
                                 MIT License
                             </a>
@@ -116,7 +116,7 @@ check_logged_out();
                         <p class="mt-4 mb-3 text-muted text-center">
                             <a href="https://github.com/msaad1999/PHP-Login-System" target="_blank">
                                 Login System
-                            </a> |
+                            </a> | 
                             <a href="https://github.com/msaad1999/PHP-Login-System/blob/master/LICENSE" target="_blank">
                                 MIT License
                             </a>
@@ -125,9 +125,9 @@ check_logged_out();
                     </form>
 
                 <?php } ?>
-
-
-
+                    
+                    
+            
         </div>
         <div class="col-sm-4">
 
