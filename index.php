@@ -11,13 +11,15 @@
     <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <!--<link rel="import" href="./navbar.html">-->
-     <script src="jquery.js"></script> 
+     <script src="jquery.js"></script>
 </head>
 
 <body>
-    <?php include("/assets/layouts/header.php"); ?> <!--Bug-->
-    
-    
+    <?php
+      include $_SERVER['DOCUMENT_ROOT']."/assets/layouts/header.php";
+      //include('header.php'); ?> <!--Bug-->
+
+
 </body>
 
 </html>
