@@ -21,7 +21,7 @@ check_logged_out();
 </head>
 
 <body>
-    <div class="login-clean" style="background: rgb(255,255,255);"><a class="btn btn-primary" role="button" style="background: url(&quot;../assets/img/Back.svg&quot;) left no-repeat;margin-left: 50px;border-style: none;border-top-style: none;border-right-color: rgb(255,255,255);border-left-color: rgb(255,255,255);" href="../index.php"></a>
+    <div class="login-clean" style="background: rgb(255,255,255);"><a class="btn btn-primary" role="button" style="background: url(&quot;../assets/img/Back.svg&quot;) left no-repeat;margin-left: 50px;border-style: none;border-top-style: none;border-right-color: rgb(255,255,255);border-left-color: rgb(255,255,255);" href="../index"></a>
         <form method="post" action="includes/login.inc.php" style="border-color: rgb(255,255,255);">
 
             <?php insert_csrf_token(); ?>

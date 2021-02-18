@@ -22,12 +22,12 @@
 
 
                       <?php if (!isset($_SESSION['auth'])) { ?>
-                            <a class="btn btn-light action-button" role="button" href="login" style="margin: 3px;">後台</a>
+                            <a class="btn btn-light action-button" role="button" href="../login" style="margin: 3px;">登入</a><a class="btn btn-light action-button" role="button" href="../register" style="margin: 3px;">註冊</a>
 
 
-                      <?php } else { ?>
-                            <a class="btn btn-light action-button" role="button" href="login" style="margin: 3px;">登入</a><a class="btn btn-light action-button" role="button" href="register.html" style="margin: 3px;">註冊</a>
-                            
+                      <?php }else{ ?>
+
+                            <a class="btn btn-light action-button" role="button" href="../login" style="margin: 3px;">後台</a>
 
                       <?php } ?>
 

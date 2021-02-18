@@ -7,137 +7,134 @@ check_logged_out();
 ?>
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4">
+<!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>keedos official</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <?php if (isset($_GET['selector']) && isset($_GET['validator'])) { ?>
+      <div class="login-clean" style="background: rgb(255,255,255);"><a class="btn btn-primary" role="button" style="background: url(&quot;assets/img/Back.svg&quot;) left no-repeat;margin-left: 50px;border-style: none;border-top-style: none;border-right-color: rgb(255,255,255);border-left-color: rgb(255,255,255);" href="login.html"></a>
+        <form method="post" style="border-color: rgb(255,255,255);">
+
+          <?php
+              insert_csrf_token();
+
+              $selector = $_GET['selector'];
+              $validator = $_GET['validator'];
+          ?>
+
+          <input type="hidden" name="selector" value="<?php echo $selector; ?>">
+          <input type="hidden" name="validator" value="<?php echo $validator; ?>">
+
+
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration"><strong style="padding: 15px;">重設密碼</strong></div>
+
+            <div class="text-center mb-3">
+                <small class="text-success font-weight-bold">
+                    <?php
+                        if (isset($_SESSION['STATUS']['resetsubmit']))
+                            echo $_SESSION['STATUS']['resetsubmit'];
+
+                    ?>
+                </small>
+            </div>
+
+            <div class="text-center mb-3">
+                <sub class="text-danger">
+                    <?php
+                        if (isset($_SESSION['ERRORS']['passworderror']))
+                            echo $_SESSION['ERRORS']['passworderror'];
+                    ?>
+                </sub>
+            </div>
+
+            <div class="form-group">
+              <input class="form-control" type="password" id="newpassword" name="newpassword" placeholder="新密碼" autocomplete="new-password" style="border-radius: 16px;">
+            </div>
+
+            <div class="form-group">
+              <input class="form-control" type="password" id="confirmpassword" name="confirmpassword" placeholder="確認密碼" autocomplete="new-password" style="border-radius: 16px;">
+            </div>
+
+            <div class="form-group">
+                <div class="form-row" style="text-align: center;margin: 0px;opacity: 1;">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                    <div class="col" style="padding: 0px;padding-right: 0px;">
+                      <button class="btn btn-primary btn-block" type="submit" value="resetsubmit" name="resetsubmit" style="text-align: center;border-radius: 40px;font-family: Poppins;background: #f08b33;font-family: Poppins;font-style: normal;font-weight: 600;font-size: 14px;line-height: 24px;align-items: center;text-align: center;letter-spacing: 0.75px;color: #ffffff;width: 184px;height: 40px;">重設密碼
+                      </button>
+                    </div>
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+          </form>
         </div>
-        <div class="col-sm-4">
 
-                <?php if (isset($_GET['selector']) && isset($_GET['validator'])) { ?>
+      <?php } else { ?>
+        <div class="login-clean" style="background: rgb(255,255,255);"><a class="btn btn-primary" role="button" style="background: url(&quot;assets/img/Back.svg&quot;) left no-repeat;margin-left: 50px;border-style: none;border-top-style: none;border-right-color: rgb(255,255,255);border-left-color: rgb(255,255,255);" href="login.html"></a>
+          <form method="post" style="border-color: rgb(255,255,255);">
 
-                    <form class="form-auth" action="includes/reset.inc.php" method="post">
+            <?php insert_csrf_token(); ?>
 
-                        <?php
-                            insert_csrf_token();
+            <div class="illustration"><strong style="padding: 15px;">重設密碼</strong></div>
 
-                            $selector = $_GET['selector'];
-                            $validator = $_GET['validator'];
-                        ?>
+            <div class="text-center mb-3">
+                <small class="text-success font-weight-bold">
+                    <?php
+                        if (isset($_SESSION['STATUS']['resentsend']))
+                            echo $_SESSION['STATUS']['resentsend'];
 
-                        <input type="hidden" name="selector" value="<?php echo $selector; ?>">
-                        <input type="hidden" name="validator" value="<?php echo $validator; ?>">
+                    ?>
+                </small>
+            </div>
 
-                        <div class="text-center">
-                            <img class="mb-1" src="../assets/images/logo.png" alt="" width="130" height="130">
-                        </div>
+            <div class="form-group">
+              <input class="form-control" type="email" id="email" name="email" placeholder="Email" inputmode="email" style="border-radius: 16px;">
+              <sub class="text-danger">
+                  <?php
+                      if (isset($_SESSION['ERRORS']['emailerror']))
+                          echo $_SESSION['ERRORS']['emailerror'];
+                  ?>
+              </sub>
+            </div>
+            <div class="form-group">
+                <div class="form-row" style="text-align: center;margin: 0px;opacity: 1;">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                    <div class="col" style="padding: 0px;padding-right: 0px;">
+                      <button class="btn btn-primary btn-block" type="submit" value="resentsend" name="resentsend" style="text-align: center;border-radius: 40px;font-family: Poppins;background: #f08b33;font-family: Poppins;font-style: normal;font-weight: 600;font-size: 14px;line-height: 24px;align-items: center;text-align: center;letter-spacing: 0.75px;color: #ffffff;width: 184px;height: 40px;">發送密碼重設連結
+                      </button>
+                    </div>
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+      </div>
 
-                        <h6 class="h5 mb-3 font-weight-normal text-muted text-center">Reset password</h6>
-
-                        <div class="text-center mb-3">
-                            <small class="text-success font-weight-bold">
-                                <?php
-                                    if (isset($_SESSION['STATUS']['resetsubmit']))
-                                        echo $_SESSION['STATUS']['resetsubmit'];
-
-                                ?>
-                            </small>
-                        </div>
-
-                        <div class="text-center mb-3">
-                            <sub class="text-danger">
-                                <?php
-                                    if (isset($_SESSION['ERRORS']['passworderror']))
-                                        echo $_SESSION['ERRORS']['passworderror'];
-                                ?>
-                            </sub>
-                        </div>
-
-                        <div class=" form-group">
-                            <input type="password" id="newpassword" name="newpassword" class="form-control" placeholder="New Password" autocomplete="new-password">
-                        </div>
-
-                        <div class=" form-group mb-5">
-                            <input type="password" id="confirmpassword" name="confirmpassword" class="form-control" placeholder="Confirm Password" autocomplete="new-password">
-                        </div>
-
-                        <button class="btn btn-lg btn-primary btn-block mb-5 mt-4" type="submit" value="resetsubmit" name="resetsubmit">
-                            Reset Password
-                        </button>
-
-                        <p class="mt-4 mb-3 text-muted text-center">
-                            <a href="https://github.com/msaad1999/PHP-Login-System" target="_blank">
-                                Login System
-                            </a> |
-                            <a href="https://github.com/msaad1999/PHP-Login-System/blob/master/LICENSE" target="_blank">
-                                MIT License
-                            </a>
-                        </p>
-
-                    </form>
-
-                <?php } else { ?>
-
-                    <form class="form-auth" action="includes/sendtoken.inc.php" method="post">
-
-                        <?php insert_csrf_token(); ?>
-
-                        <div class="text-center">
-                            <img class="mb-1" src="../assets/images/logo.png" alt="" width="130" height="130">
-                        </div>
-
-                        <h6 class="h5 mb-3 font-weight-normal text-muted text-center">Reset password</h6>
-
-                        <div class="text-center mb-3">
-                            <small class="text-success font-weight-bold">
-                                <?php
-                                    if (isset($_SESSION['STATUS']['resentsend']))
-                                        echo $_SESSION['STATUS']['resentsend'];
-
-                                ?>
-                            </small>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email" class="sr-only">Email</label>
-                            <input type="email" id="email" name="email" class="form-control" placeholder="Email" required autofocus>
-                            <sub class="text-danger">
-                                <?php
-                                    if (isset($_SESSION['ERRORS']['emailerror']))
-                                        echo $_SESSION['ERRORS']['emailerror'];
-                                ?>
-                            </sub>
-                        </div>
-
-                        <button class="btn btn-lg btn-primary btn-block mb-5 mt-4" type="submit" value="resentsend" name="resentsend">
-                            Send Password Reset Link
-                        </button>
-
-                        <p class="mt-4 mb-3 text-muted text-center">
-                            <a href="https://github.com/msaad1999/PHP-Login-System" target="_blank">
-                                Login System
-                            </a> |
-                            <a href="https://github.com/msaad1999/PHP-Login-System/blob/master/LICENSE" target="_blank">
-                                MIT License
-                            </a>
-                        </p>
-
-                    </form>
-
-                <?php } ?>
+      <?php } ?>
 
 
-
-        </div>
-        <div class="col-sm-4">
-
-        </div>
     </div>
-</div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
 
-
-<?php
-
-include '../assets/layouts/footer.php'
-
-?>
+</html>
