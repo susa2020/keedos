@@ -1,4 +1,4 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -17,20 +17,23 @@
                 </ul>
                 <form class="form-inline mr-auto" target="_self">
                     <div class="form-group"><label for="search-field"></label></div>
-                    
+
                 </form><i class="fa fa-search" style="margin: 5px;"></i><input type="search" id="search-field" class="search-field" name="search" style="border-top-left-radius: 15px;border-top-right-radius: 15px;border-bottom-right-radius: 15px;border-bottom-left-radius: 15px;border-width: 2px;border-style: solid;padding: 1px;margin: 5px;">
-                <?php 
-                        if(!isset($_SESSION['auth'])){
-                           echo '<a class="btn btn-light action-button" role="button" href="login" style="margin: 3px;">後台</a>'; 
-                        }
-                        else {
-                            echo '<a class="btn btn-light action-button" role="button" href="login" style="margin: 3px;">登入</a><a class="btn btn-light action-button" role="button" href="register.html" style="margin: 3px;">註冊</a>';
-                        }
-                    
-                    ?>
-                
+
+
+                      <?php if (!isset($_SESSION['auth'])) { ?>
+                            <a class="btn btn-light action-button" role="button" href="login" style="margin: 3px;">後台</a>
+
+
+                      <?php } else { ?>
+                            <a class="btn btn-light action-button" role="button" href="login" style="margin: 3px;">登入</a><a class="btn btn-light action-button" role="button" href="register.html" style="margin: 3px;">註冊</a>
+                            
+
+                      <?php } ?>
+
+
             </div>
         </div>
-    </nav>   
+    </nav>
 </body>
 </html>
