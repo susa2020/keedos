@@ -25,7 +25,7 @@ check_logged_out();
 
     <?php if (isset($_GET['selector']) && isset($_GET['validator'])) { ?>
       <div class="login-clean" style="background: rgb(255,255,255);"><a class="btn btn-primary" role="button" style="background: url(&quot;../assets/img/Back.svg&quot;) left no-repeat;margin-left: 50px;border-style: none;border-top-style: none;border-right-color: rgb(255,255,255);border-left-color: rgb(255,255,255);" href="../login"></a>
-        <form method="post" style="border-color: rgb(255,255,255);">
+        <form method="post" action="includes/reset.inc.php" style="border-color: rgb(255,255,255);">
 
           <?php
               insert_csrf_token();
@@ -87,7 +87,7 @@ check_logged_out();
 
       <?php } else { ?>
         <div class="login-clean" style="background: rgb(255,255,255);"><a class="btn btn-primary" role="button" style="background: url(&quot;../assets/img/Back.svg&quot;) left no-repeat;margin-left: 50px;border-style: none;border-top-style: none;border-right-color: rgb(255,255,255);border-left-color: rgb(255,255,255);" href="../login"></a>
-          <form method="post" style="border-color: rgb(255,255,255);">
+          <form method="post" action="includes/sendtoken.inc.php" style="border-color: rgb(255,255,255);">
 
             <?php insert_csrf_token(); ?>
 

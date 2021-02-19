@@ -16,11 +16,11 @@ check_logged_out();
     <link rel="stylesheet" href="../assets/css/Login-Form-Clean.css">
     <link rel="stylesheet" href="../assets/css/Registration-Form-with-Photo.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
-     <script src="jquery.js"></script>
+     <!-- <script src="jquery.js"></script> <!-- 用途 -->
 </head>
 
 <body>
-   
+
 
 
 </body>
