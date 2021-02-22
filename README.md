@@ -44,18 +44,28 @@
 ```
 keedos
 └───assets  //素材（開場動畫、圖片
-│      └───bootstrap
+│      └───bootstrap //勿動
 │      └───css
-│      │    └───index
-│      │    └───about
-│      │    └───  .
-│      │    └───  .
-│      │    └───  .
-│      └───fonts
+│      │    └───Login-Form-Clean.css//登入 註冊頁表單css
+│      │    └───Navigation-with-Search.css//navigation bar
+│      │    └───Registration-Form-with-Photo.css
+│      │    └───app.css //登入系統原始css
+│      │    └───resumelist.css
+│      │    └───smoothproducts.css//bootstrap studio生成 但不知道用在哪
+│      │    └───styles.css//網頁自訂css 目前存放粉圓體cdn 及全站套用字型
+│      └───fonts//bootstrap studio 網頁字型
+│      └───images//登入系統預設image location 圖片請存img
 │      └───img
-│      │    └───index
-│      │    └───about
-│      └───js
+│      │    └───avatars//bootstrap studio預設圖片 未來可刪
+│      │    └───logo//keedos 的各種 logo
+│      │    └───scenery//bootstrap studio預設圖片 未來可刪
+│      │    └───tech//bootstrap studio預設圖片 未來可刪
+│      │    └───Back.svg//login,register,忘記密碼 頁面的返回圖檔
+│      │    └───meeting.jpg//bootstrap studio預設圖片 未來可刪
+│      └───includes//登入系統include folder
+│      └───js//包含bootstrap studio,登入系統檔案
+│      └───layouts//navigation bar,footer,header(include header 確保登入系統常運作 
+│                   ps. include header 即會include nav bar) 
 │
 └───index.php       
 │    .   
