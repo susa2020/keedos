@@ -65,8 +65,11 @@ keedos
 │      └───includes//登入系統include folder
 │      └───js//包含bootstrap studio,登入系統檔案
 │      └───layouts//navigation bar,footer,header(務必include header 確保登入系統常運作 
-│                   ps. include header 即會include nav bar) 
-│
+│      │             ps. include header 即會include nav bar) 
+│      │
+│      └───setup//登入系統 環境設定（db,email info)
+│      └───uploads/users //登入系統使用者上傳圖檔存放處
+│      └───vandor //登入系統預設bootstrap,js,css.....
 └───index.php       
 │    .   
 │    .
