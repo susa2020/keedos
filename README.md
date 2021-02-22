@@ -64,7 +64,7 @@ keedos
 │      │    └───meeting.jpg//bootstrap studio預設圖片 未來可刪
 │      └───includes//登入系統include folder
 │      └───js//包含bootstrap studio,登入系統檔案
-│      └───layouts//navigation bar,footer,header(include header 確保登入系統常運作 
+│      └───layouts//navigation bar,footer,header(務必include header 確保登入系統常運作 
 │                   ps. include header 即會include nav bar) 
 │
 └───index.php       
