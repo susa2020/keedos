@@ -70,7 +70,18 @@ keedos
 │      └───setup//登入系統 環境設定（db,email info)
 │      └───uploads/users //登入系統使用者上傳圖檔存放處
 │      └───vandor //登入系統預設bootstrap,js,css.....
-└───index.php       
+└───contact
+└───dashboard
+└───home
+└───index
+└───login
+└───logout
+└───profile-edit
+└───profile
+└───register
+└───reset-password
+└───verify
+└───index.php     
 │    .   
 │    .
 │    .
