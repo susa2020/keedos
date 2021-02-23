@@ -70,17 +70,18 @@ keedos
 │      └───setup//登入系統 環境設定（db,email info)
 │      └───uploads/users //登入系統使用者上傳圖檔存放處
 │      └───vandor //登入系統預設bootstrap,js,css.....
-└───contact
-└───dashboard
-└───home
-└───index
-└───login
-└───logout
-└───profile-edit
-└───profile
-└───register
-└───reset-password
-└───verify
+└───contact //聯絡表單
+└───dashboard //未開發的super user 功能
+└───home //登入後預設跳轉頁面
+└───index //為解決 index.php在根目錄無法include assets 的問題
+└───login //登入 已完成勿隨意更改
+└───logout //登出 網址/logout 即可登出
+└───profile-edit //個人資料編輯
+└───profile //個人資料
+└───register //註冊 已完成勿隨意更改
+└───reset-password //密碼重設 已完成勿隨意更改
+└───verify //email驗證,email模板
+└───welcome //歡迎頁 
 └───index.php     
 │    .   
 │    .
