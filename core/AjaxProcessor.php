@@ -2,7 +2,7 @@
 
 namespace AjaxLiveSearch\core;
 
-header('Access-Control-Allow-Origin: http://ajaxlivesearch.com');
+header('Access-Control-Allow-Origin: http://keedos.secretfile.i234.me');
 header('Access-Control-Allow-Methods: *');
 header('Content-Type: application/json');
 

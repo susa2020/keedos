@@ -1,6 +1,6 @@
 <?php
 
-namespace AjaxLiveSearch\core;
+//namespace AjaxLiveSearch\core;
 
 if (count(get_included_files()) === 1) {
     exit('Direct access not permitted.');
@@ -19,10 +19,10 @@ class Config
         'dataSources'           => [
             'ls_query' => [
                 'host'               => 'localhost',
-                'database'           => 'live_search',
-                'username'           => 'root',
-                'pass'               => '',
-                'table'              => 'live_search_table',
+                'database'           => 'klik_loginsystem',
+                'username'           => 'keedos',
+                'pass'               => 'mB7[rUl!s)',
+                'table'              => 'resume',
                 // specify the name of search columns
                 'searchColumns'      => ['name'],
                 // specify order by column. This is optional

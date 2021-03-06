@@ -1,14 +1,48 @@
+<?php
+
+$DS = DIRECTORY_SEPARATOR;
+//file_exists(__DIR__ . $DS . 'core' . $DS . 'Handler.php') ? require_once __DIR__ . $DS . 'core' . $DS . 'Handler.php' : die('Handler.php not found');
+//file_exists(__DIR__ . $DS . 'core' . $DS . 'Config.php') ? require_once __DIR__ . $DS . 'core' . $DS . 'Config.php' : die('Config.php not found');
+
+require '../core/Handler.php';
+require '../core/Config.php';
+
+//use AjaxLiveSearch\core\Config;
+//use AjaxLiveSearch\core\Handler;
+
+if (session_id() == '') {
+    session_start();
+}
+
+    $handler = new Handler();
+    $handler->getJavascriptAntiBot();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
+    <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="../assets/css/Login-Form-Clean.css">
     <link rel="stylesheet" href="../assets/css/Registration-Form-with-Photo.css">
-    <link rel="stylesheet" href="../assets/css/styles.css"></head>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <!-- Live Search Styles -->
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="css/fontello-ie7.css">
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/ajaxlivesearch.min.css">
+
+
+  </head>
 <body>
  <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-        <div class="container"><a class="navbar-brand" href="../index">&nbsp;Keedos&nbsp;</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container">
+          <a class="navbar-brand" href="../index">&nbsp;Keedos&nbsp;</a>
+          <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav">
                     <li class="nav-item"><a class="nav-link active" href="#">關於我們</a></li>
@@ -18,7 +52,7 @@
                 <form class="form-inline mr-auto" target="_self">
                     <div class="form-group"><label for="search-field"></label></div>
 
-                </form><i class="fa fa-search" style="margin: 5px;"></i><input type="search" id="search-field" class="search-field" name="search" style="border-top-left-radius: 15px;border-top-right-radius: 15px;border-bottom-right-radius: 15px;border-bottom-left-radius: 15px;border-width: 2px;border-style: solid;padding: 1px;margin: 5px;">
+                </form><i class="fa fa-search" style="margin: 5px;"></i><input type="text" id="ls_query" class="mySearch" name="search" style="border-top-left-radius: 15px;border-top-right-radius: 15px;border-bottom-right-radius: 15px;border-bottom-left-radius: 15px;border-width: 2px;border-style: solid;padding: 1px;margin: 5px;">
 
 
                       <?php if (!isset($_SESSION['auth'])) { ?>
