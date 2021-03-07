@@ -19,6 +19,15 @@ if (session_id() == '') {
 <html lang="en">
 <head>
     <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="description"
+          content="AJAX Live Search is a PHP search form that similar to Google Autocomplete feature displays the result as you type">
+    <meta name="keywords"
+          content="Ajax Live Search, Autocomplete, Auto Suggest, PHP, HTML, CSS, jQuery, JavaScript, search form, MySQL, web component, responsive">
+    <meta name="author" content="Ehsan Abbasi">
+
+    <title>AJAX Live Search</title>
 
     <!-- Live Search Styles -->
     <link rel="stylesheet" href="css/fontello.css">

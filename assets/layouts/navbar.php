@@ -30,13 +30,6 @@ if (session_id() == '') {
     <link rel="stylesheet" href="../assets/css/Registration-Form-with-Photo.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
 
-    <!-- Live Search Styles -->
-    <link rel="stylesheet" href="css/fontello.css">
-    <link rel="stylesheet" href="css/animation.css">
-    <!--[if IE 7]>
-    <link rel="stylesheet" href="css/fontello-ie7.css">
-    <![endif]-->
-    <link rel="stylesheet" type="text/css" href="css/ajaxlivesearch.min.css">
 
 
   </head>
@@ -56,6 +49,7 @@ if (session_id() == '') {
 
                 </form><i class="fa fa-search" style="margin: 5px;"></i><input type="text" id="ls_query" class="mySearch" name="search" style="border-top-left-radius: 15px;border-top-right-radius: 15px;border-bottom-right-radius: 15px;border-bottom-left-radius: 15px;border-width: 2px;border-style: solid;padding: 1px;margin: 5px;">
 
+                      <?php include '../../search.php'; ?>
 
                       <?php if (!isset($_SESSION['auth'])) { ?>
                             <a class="btn btn-light action-button" role="button" href="../login" style="margin: 3px;">登入</a><a class="btn btn-light action-button" role="button" href="../register" style="margin: 3px;">註冊</a>
@@ -75,37 +69,7 @@ if (session_id() == '') {
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery-1.11.1.min.js"></script>
 
-    <!-- Live Search Script -->
-    <script type="text/javascript" src="js/ajaxlivesearch.min.js"></script>
-
-    <script>
-    jQuery(document).ready(function(){
-        jQuery(".mySearch").ajaxlivesearch({
-            loaded_at: <?php echo time(); ?>,
-            token: <?php echo "'" . $handler->getToken() . "'"; ?>,
-            max_input: <?php echo Config::getConfig('maxInputLength'); ?>,
-            onResultClick: function(e, data) {
-                // get the index 0 (first column) value
-                var selectedOne = jQuery(data.selected).find('td').eq('0').text();
-
-                // set the input value
-                jQuery('#ls_query').val(selectedOne);
-
-                // hide the result
-                jQuery("#ls_query").trigger('ajaxlivesearch:hide_result');
-            },
-            onResultEnter: function(e, data) {
-                // do whatever you want
-                // jQuery("#ls_query").trigger('ajaxlivesearch:search', {query: 'test'});
-            },
-            onAjaxComplete: function(e, data) {
-
-            }
-        });
-    })
     </script>
 
 
