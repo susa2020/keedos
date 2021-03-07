@@ -1,6 +1,6 @@
 <?php
 
-//namespace AjaxLiveSearch\core;
+namespace AjaxLiveSearch\core;
 
 $DS = DIRECTORY_SEPARATOR;
 file_exists(__DIR__ . $DS . 'DB.php') ? require_once __DIR__ . $DS . 'DB.php' : die('DB.php not found');

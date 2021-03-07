@@ -4,11 +4,13 @@ $DS = DIRECTORY_SEPARATOR;
 //file_exists(__DIR__ . $DS . 'core' . $DS . 'Handler.php') ? require_once __DIR__ . $DS . 'core' . $DS . 'Handler.php' : die('Handler.php not found');
 //file_exists(__DIR__ . $DS . 'core' . $DS . 'Config.php') ? require_once __DIR__ . $DS . 'core' . $DS . 'Config.php' : die('Config.php not found');
 
-require '../core/Handler.php';
-require '../core/Config.php';
 
-//use AjaxLiveSearch\core\Config;
-//use AjaxLiveSearch\core\Handler;
+
+require_once '../core/Handler.php';
+require_once '../core/Config.php';
+
+use AjaxLiveSearch\core\Config;
+use AjaxLiveSearch\core\Handler;
 
 if (session_id() == '') {
     session_start();
@@ -72,5 +74,42 @@ if (session_id() == '') {
     </nav>
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <!-- Live Search Script -->
+    <script type="text/javascript" src="js/ajaxlivesearch.min.js"></script>
+
+    <script>
+    jQuery(document).ready(function(){
+        jQuery(".mySearch").ajaxlivesearch({
+            loaded_at: <?php echo time(); ?>,
+            token: <?php echo "'" . $handler->getToken() . "'"; ?>,
+            max_input: <?php echo Config::getConfig('maxInputLength'); ?>,
+            onResultClick: function(e, data) {
+                // get the index 0 (first column) value
+                var selectedOne = jQuery(data.selected).find('td').eq('0').text();
+
+                // set the input value
+                jQuery('#ls_query').val(selectedOne);
+
+                // hide the result
+                jQuery("#ls_query").trigger('ajaxlivesearch:hide_result');
+            },
+            onResultEnter: function(e, data) {
+                // do whatever you want
+                // jQuery("#ls_query").trigger('ajaxlivesearch:search', {query: 'test'});
+            },
+            onAjaxComplete: function(e, data) {
+
+            }
+        });
+    })
+    </script>
+
+
+
+
 </body>
 </html>

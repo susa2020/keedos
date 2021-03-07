@@ -1,6 +1,6 @@
 <?php
 
-//namespace AjaxLiveSearch\core;
+namespace AjaxLiveSearch\core;
 
 if (count(get_included_files()) === 1) {
     exit('Direct access not permitted.');
