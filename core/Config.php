@@ -24,7 +24,7 @@ class Config
                 'pass'               => 'mB7[rUl!s)',
                 'table'              => 'resume',
                 // specify the name of search columns
-                'searchColumns'      => ['name'],
+                'searchColumns'      => ['Keyword'],
                 // specify order by column. This is optional
                 'orderBy'            => '',
                 // specify order direction e.g. ASC or DESC. This is optional
@@ -33,7 +33,7 @@ class Config
                  * filter the result by entering table column names
                  * to get all the columns, remove filterResult or make it an empty array
                  */
-                'filterResult'       => [],
+                'filterResult'       => ['id','Name','Keyword'],
                 /**
                  * specify search query comparison operator.
                  * possible values for comparison operators are: 'LIKE' and '='. this is required
@@ -43,7 +43,7 @@ class Config
                  * searchPattern is used to specify how the query is searched.
                  * possible values are: 'q', '*q', 'q*', '*q*'. this is required
                  */
-                'searchPattern'      => 'q*',
+                'searchPattern'      => '*q*',
                 // specify search query case sensitivity
                 'caseSensitive'      => false,
                 // to limit the maximum number of result uncomment this:
