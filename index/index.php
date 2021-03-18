@@ -30,20 +30,7 @@ check_logged_out();
 
     <header class="header-blue">
         <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
-            <div class="container-fluid"><a class="navbar-brand" href="#">Company Name</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">Dropdown </a>
-                            <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
-                        </li>
-                    </ul>
-                    <form class="form-inline mr-auto" target="_self">
-                        <div class="form-group mb-0"><label for="search-field"><i class="fa fa-search"></i></label><input class="form-control search-field" type="search" id="search-field" name="search"></div>
-                    </form><span class="navbar-text"> <a class="login" href="#">Log In</a></span><a class="btn btn-light action-button" role="button" href="#">Sign Up</a>
-                </div>
-            </div>
-        </nav>
+
         <div class="container hero">
             <div class="row">
                 <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
@@ -100,9 +87,7 @@ check_logged_out();
 </body>
 
 <?php
-
-include '../assets/layouts/footer.php';
-
+require("../assets/layouts/footer.php");
 ?>
 
 </html>
