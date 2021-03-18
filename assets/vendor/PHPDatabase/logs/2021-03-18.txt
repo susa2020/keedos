@@ -1,3 +1,23 @@
+Time : 17:03:17
+SQLSTATE[HY000]: General error: 1364 Field 'Social Media' doesn't have a default value
+Raw SQL : INSERT INTO resume (Name,Keyword,Gender,Birth,Phone,Email) VALUES (:Name,:Keyword,:Gender,:Birth,:Phone,:Email)
+
+Time : 17:02:25
+SQLSTATE[HY000]: General error: 1364 Field 'Email' doesn't have a default value
+Raw SQL : INSERT INTO resume (Name,Keyword,Gender,Birth,Phone) VALUES (:Name,:Keyword,:Gender,:Birth,:Phone)
+
+Time : 17:01:44
+SQLSTATE[HY000]: General error: 1364 Field 'Phone' doesn't have a default value
+Raw SQL : INSERT INTO resume (Name,Keyword,Gender,Birth) VALUES (:Name,:Keyword,:Gender,:Birth)
+
+Time : 16:45:51
+SQLSTATE[HY000]: General error: 1364 Field 'Phone' doesn't have a default value
+Raw SQL : INSERT INTO resume (Name,Keyword,Gender,Birth) VALUES (:Name,:Keyword,:Gender,:Birth)
+
+Time : 16:43:53
+SQLSTATE[HY000]: General error: 1364 Field 'Birth' doesn't have a default value
+Raw SQL : INSERT INTO resume (Name,Keyword,Gender) VALUES (:Name,:Keyword,:Gender)
+
 Time : 09:28:07
 SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Name' in 'where clause'
 Raw SQL : SELECT * FROM Persons WHERE Name = :Name AND Keyword = :Keyword

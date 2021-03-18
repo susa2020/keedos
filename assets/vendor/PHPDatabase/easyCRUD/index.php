@@ -9,6 +9,11 @@
    $person->Name = "Koqqra";
    $person->Keyword  = "#test233";
    $person->Gender = "F";
+   $person->Birth = "2003-01-01";
+   $person->Phone = "091234567";
+   $person->Email = "asd@asd.com";
+   $person->Social_Media = "asd@asd.com";
+
    $creation = $person->Create();
 
 // Update Person Info

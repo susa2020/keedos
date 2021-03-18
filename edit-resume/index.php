@@ -1,3 +1,9 @@
+<?php
+
+define('TITLE', "edit resume");
+include '../assets/layouts/header.php';
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -13,11 +19,12 @@
 <body>
     <section class="contact-clean">
         <form method="post" action="includes/edit-resume.inc.php">
+            <?php insert_csrf_token(); ?>
             <h2 class="text-center">Contact us</h2>
             <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div>
-            <div class="form-group"><textarea class="form-control" name="gender" placeholder="Message" rows="14"></textarea></div>
-            <div class="form-group"><textarea class="form-control" name="experience" placeholder="Message" rows="14"></textarea></div>
-            <div class="form-group"><textarea class="form-control" name="keyword" placeholder="Message" rows="14"></textarea></div>
+            <div class="form-group"><textarea class="form-control" name="gender" placeholder="gender" rows="14"></textarea></div>
+            <div class="form-group"><textarea class="form-control" name="experience" placeholder="experience" rows="14"></textarea></div>
+            <div class="form-group"><textarea class="form-control" name="keyword" placeholder="keyword" rows="14"></textarea></div>
             <div class="form-group"><button class="btn btn-primary" type="submit" value="resumesubmit">send </button></div>
         </form>
     </section>
