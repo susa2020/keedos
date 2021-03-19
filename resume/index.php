@@ -3,8 +3,11 @@
 define('TITLE', "show resume");
 include '../assets/layouts/header.php';
 require("../assets/vendor/PHPDatabase/easyCRUD/Person.class.php");
+
+$resumeID = $_GET["id"];
+
 $person  = new Person();
-$person->id = "20";
+$person->id = $resumeID;
 $person->Find();
 
 //d($person->Name, "Person->Name");
