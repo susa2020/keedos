@@ -26,16 +26,16 @@ define('TITLE', "index");
 
 <body>
     <section id="welcome">
-        <nav class="navbar navbar-light navbar-expand-md" style="padding: 8px;padding-right: 50px;padding-left: 50px;padding-top: 8px;padding-bottom: 8px;">
-            <div class="container-fluid"><a class="navbar-brand" href="index.html"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link active about" href="#" style="color: #18191f;font-size: 14px;width: 70px;padding: 0px;padding-top: 12px;font-family: FakePearl;">關於 SUSA</a></li>
-                        <li class="nav-item working"><a class="nav-link working" href="#how-to-use" style="color: #18191f;font-size: 15px;padding: 0px;width: 70px;font-family: FakePearl;">運作方式</a></li>
-                    </ul><span class="ml-auto navbar-text actions"> <a class="login" href="../login">登入</a><a class="btn btn-light action-button" role="button" href="../register">註冊</a></span>
-                </div>
-            </div>
-        </nav>
+      <nav class="navbar navbar-light navbar-expand-md" style="padding: 8px;padding-right: 50px;padding-left: 50px;padding-top: 8px;padding-bottom: 8px;">
+          <div class="container-fluid"><a class="navbar-brand" href="../index"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+              <div class="collapse navbar-collapse" id="navcol-1">
+                  <ul class="navbar-nav">
+                      <li class="nav-item"><a class="nav-link active about" style="color: #18191f;font-size: 14px;width: 90px;padding: 0px;padding-top: 12px;font-family: FakePearl;" href="about-susa.html">About SUSA</a></li>
+                      <li class="nav-item working"><a class="nav-link working" style="color: #18191f;font-size: 15px;padding: 0px;width: 70px;font-family: FakePearl;" href="#how-to-use">運作方式</a></li>
+                  </ul><span class="ml-auto navbar-text actions"> <a class="login" href="../login">登入</a><a class="btn btn-light action-button" role="button" href="../register">註冊</a></span>
+              </div>
+          </div>
+      </nav>
         <div class="container" id="title-and-button">
             <div class="row">
                 <div class="col">
@@ -130,19 +130,19 @@ define('TITLE', "index");
             <div class="container">
                 <h1>探索特色功能</h1>
                 <div class="row">
-                    <div class="col-md-4"><i class="fa fa-star" style="background: url(&quot;assets/img/1.svg&quot;) center / contain no-repeat;width: 35px;height: 35px;color: rgba(33,37,41,0);font-size: 0px;"></i>
+                    <div class="col-md-4"><i class="fa fa-star" style="background: url(&quot;../assets/img/1.svg&quot;) center / contain no-repeat;width: 35px;height: 35px;color: rgba(33,37,41,0);font-size: 0px;"></i>
                         <h2>簡單的流程</h2>
                         <p>簡單幾個步驟即可註冊好帳號<br>開始你的旅程</p><a href="#">查看更多<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="color: #f08b33;font-size: 23px;margin-top: -4px;">
                                 <path d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z" fill="currentColor"></path>
                             </svg></a>
                     </div>
-                    <div class="col-md-4"><i class="fa fa-star" style="background: url(&quot;assets/img/04.svg&quot;) center / contain no-repeat;width: 35px;height: 35px;color: rgba(33,37,41,0);font-size: 0px;"></i>
+                    <div class="col-md-4"><i class="fa fa-star" style="background: url(&quot;../assets/img/04.svg&quot;) center / contain no-repeat;width: 35px;height: 35px;color: rgba(33,37,41,0);font-size: 0px;"></i>
                         <h2>自動生成履歷</h2>
                         <p>透過回答問卷 <br>來完成屬於自己的履歷</p><a href="#">查看更多<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="color: #f08b33;font-size: 23px;margin-top: -4px;">
                                 <path d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z" fill="currentColor"></path>
                             </svg></a>
                     </div>
-                    <div class="col-md-4"><i class="fa fa-star" style="background: url(&quot;assets/img/3.svg&quot;) center / contain no-repeat;width: 35px;height: 35px;color: rgba(33,37,41,0);font-size: 0px;"></i>
+                    <div class="col-md-4"><i class="fa fa-star" style="background: url(&quot;../assets/img/3.svg&quot;) center / contain no-repeat;width: 35px;height: 35px;color: rgba(33,37,41,0);font-size: 0px;"></i>
                         <h2>人才資料庫</h2>
                         <p>透過資料庫中的履歷<br> 尋找出最適合的人選</p><a href="#">查看更多<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="color: #f08b33;font-size: 23px;margin-top: -4px;">
                                 <path d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z" fill="currentColor"></path>
