@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="../assets/css/FakePearl.css">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="../assets/css/about-susa.css">
     <link rel="stylesheet" href="../assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
     <link rel="stylesheet" href="../assets/css/Login-Form-Clean.css">
     <link rel="stylesheet" href="../assets/css/Registration-Form-with-Photo.css">
@@ -18,11 +20,12 @@
 </head>
 
 <body>
-    <footer class="footer-dark">
+
+    <footer id="footer" class="footer-dark">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-9 col-lg-12 col-xl-9 offset-sm-3 offset-md-1 offset-lg-1 offset-xl-1 item">
-                    <h1>Keedos.</h1>
+                    <h1><img class="img-fluid" src="../assets/img/Dark.svg" width="120px" height="40px"></h1>
                     <ul>
                         <li><a href="#"></a></li>
                         <li><a href="#"></a></li>
@@ -33,8 +36,8 @@
                     <ul>
                         <li><a href="../register">即刻使用</a></li>
                         <li></li>
-                        <li><a href="#">開放原始碼授權</a></li>
-                        <li><a href="#">關於Susa</a></li>
+                        <li><a href="#">使用憑證</a></li>
+                        <li><a href="about-susa.html">關於Susa</a></li>
                         <li><a href="#">產品特色</a></li>
                     </ul>
                 </div>
@@ -43,17 +46,17 @@
                     <ul>
                         <li><a href="https://forms.gle/LJWmAf8XM3An6m5s7">加入我們</a></li>
                         <li><a href="https://www.notion.so/Keedos-e0c3c2f2a374420aafa31e9d07b5ab03">幫助</a></li>
-                        <li><a href="https://www.notion.so/5f29214c748e4a45aca5cce6b1cf947b">隱私政策</a></li>
+                        <li><a href="https://www.notion.so/5f29214c748e4a45aca5cce6b1cf947">隱私政策</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="col item social"><a href="https://www.facebook.com/susatw2020"><i class="icon ion-social-facebook"></i></a><a href="https://www.instagram.com/susatw/"><i class="icon ion-social-instagram"></i></a></div>
+            <div class="col item social"><a href="https://www.facebook.com/susatw2020/" target="_blank"><i class="icon ion-social-facebook"></i></a><a href="https://www.instagram.com/susatw/" target="_blank"><i class="icon ion-social-instagram"></i></a></div>
             <p class="copyright">©2021 Susa. All rights reserved&nbsp;</p>
         </div>
     </footer>
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <!-- <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script> -->
 </body>
 
 </html>

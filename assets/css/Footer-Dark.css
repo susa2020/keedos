@@ -88,3 +88,7 @@
   margin-bottom: 0;
 }
 
+.navbar-light .navbar-text a:focus, .navbar-light .navbar-text a:hover {
+  color: rgba(0,0,0,.9);
+}
+
