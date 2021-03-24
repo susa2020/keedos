@@ -201,6 +201,19 @@ check_logged_out();
   <!--  <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script> -->
+
+
+    <!-- Install button, hidden by default -->
+    <div id="installContainer" class="hidden">
+      <button id="butInstall" type="button">
+        Install
+      </button>
+    </div>
+
+    <!-- import the webpage's javascript file -->
+    <script src="../script.js" defer></script>
+
+
 </body>
 
 </html>

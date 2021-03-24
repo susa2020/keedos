@@ -35,7 +35,10 @@ check_remember_me();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <!-- <title>keedos official</title> -->
-    
+    <meta name="theme-color" content="rgb(240,139,51)">
+    <link rel="icon" type="image/svg+xml" sizes="223x206" href="../assets/img/K..svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/img/keedos_logo.png">
+    <link rel="manifest" href="../manifest.json">
 
 
     <title><?php echo TITLE . ' | ' . APP_NAME; ?></title>
