@@ -38,6 +38,10 @@ check_remember_me();
     <meta name="theme-color" content="rgb(240,139,51)">
     <link rel="icon" type="image/svg+xml" sizes="223x206" href="../assets/img/K..svg">
     <link rel="icon" type="image/png" sizes="512x512" href="../assets/img/keedos_logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/keedos_logo_16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/keedos_logo_32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/keedos_logo_180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/keedos_logo_192.png">
     <link rel="manifest" href="../manifest.json">
 
 

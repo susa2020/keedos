@@ -37,7 +37,7 @@
                         <li><a href="../register">即刻使用</a></li>
                         <li></li>
                         <li><a href="#">使用憑證</a></li>
-                        <li><a href="about-susa.html">關於Susa</a></li>
+                        <li><a href="../about-susa">關於Susa</a></li>
                         <li><a href="#">產品特色</a></li>
                     </ul>
                 </div>

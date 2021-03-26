@@ -166,11 +166,6 @@ check_logged_out();
         <div class="col text-center align-self-center use"><a class="btn btn-primary" role="button" style="text-align: center;" href="../register">立即使用</a></div>
       </div>
       
-      <div class="row">
-        <div class="col">
-          <p style="text-align: center;color: rgb(255,255,255);"><i class="fa fa-paint-brush" style="margin-right: 14px;"></i>illustration by unDraw</p>
-        </div>
-      </div>
     </div>
   </div>
 

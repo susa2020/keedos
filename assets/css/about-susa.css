@@ -71,8 +71,15 @@
 
 @media (min-width: 767px) {
   .team-boxed .people-first, .people {
-    padding: 50px 0px;
+    padding-right: 0px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 0px;
   }
+}
+
+.team-boxed .item-first {
+  text-align: center;
 }
 
 .team-boxed .item {
@@ -232,6 +239,12 @@
   #intro {
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+@media (min-width: 767px) {
+  .people-first .col-md-6.col-lg-4.item {
+    margin-top: 30px;
   }
 }
 
