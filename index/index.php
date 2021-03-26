@@ -51,21 +51,21 @@ check_logged_out();
       <h1 id="work">我們如何運作</h1>
       <div class="row">
         <div class="col-md-4 item">
-          <div class="card"><img class="img-fluid card-img-top w-100 d-block" src="../assets/img/undraw_fill_form_re_cwyf%202.svg" style="width: &quot;256.656&quot;;height: &quot;144&quot;;">
+          <div class="card"><img class="img-fluid card-img-top w-100 d-block" rel="preload" src="../assets/img/undraw_fill_form_re_cwyf%202.svg" style="width: &quot;256.656&quot;;height: &quot;144&quot;;">
             <div class="card-body">
               <h4 class="card-title">填寫履歷</h4>
             </div>
           </div>
         </div>
         <div class="col-md-4 item">
-          <div class="card" style="border-style: none;"><img class="img-fluid card-img-top w-100 d-block" src="../assets/img/undraw_going_up_ttm5%201.svg" style="width: 256.656;height: 144;">
+          <div class="card" style="border-style: none;"><img class="img-fluid card-img-top w-100 d-block" rel="preload" src="../assets/img/undraw_going_up_ttm5%201.svg" style="width: 256.656;height: 144;">
             <div class="card-body">
               <h4 class="card-title">上傳履歷</h4>
             </div>
           </div>
         </div>
         <div class="col-md-4 item">
-          <div class="card" style="border-style: none;"><img class="img-fluid card-img-top w-100 d-block" src="../assets/img/undraw_Mailbox_re_dvds%20(1)%201.svg" style="width: 256.656;height: 144;">
+          <div class="card" style="border-style: none;"><img class="img-fluid card-img-top w-100 d-block" rel="preload" src="../assets/img/undraw_Mailbox_re_dvds%20(1)%201.svg" style="width: 256.656;height: 144;">
             <div class="card-body">
               <h4 class="card-title">等待Email</h4>
             </div>
@@ -74,14 +74,14 @@ check_logged_out();
       </div>
       <div class="row">
         <div class="col-md-4 item">
-          <div class="card" style="border-style: none;"><img class="img-fluid card-img-top w-100 d-block" src="../assets/img/undraw_Search_re_x5gq%201.svg" style="width: 256.656;height: 144;">
+          <div class="card" style="border-style: none;"><img class="img-fluid card-img-top w-100 d-block" rel="preload" src="../assets/img/undraw_Search_re_x5gq%201.svg" style="width: 256.656;height: 144;">
             <div class="card-body">
               <h4 class="card-title">搜尋關鍵字</h4>
             </div>
           </div>
         </div>
         <div class="col-md-4 item">
-          <div class="card" style="border-style: none;"><img class="img-fluid card-img-top w-100 d-block" src="../assets/img/undraw_personal_info_0okl%201.svg" style="width: 256.656;height: 144;">
+          <div class="card" style="border-style: none;"><img class="img-fluid card-img-top w-100 d-block" rel="preload" src="../assets/img/undraw_personal_info_0okl%201.svg" style="width: 256.656;height: 144;">
             <div class="card-body">
               <h4 class="card-title">查看履歷</h4>
             </div>

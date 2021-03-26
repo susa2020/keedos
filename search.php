@@ -57,6 +57,7 @@ jQuery(document).ready(function(){
 
             // hide the result
             jQuery("#ls_query").trigger('ajaxlivesearch:hide_result');
+            window.location.href="../resume/?id="+selectedOne; 
         },
         onResultEnter: function(e, data) {
             // do whatever you want
