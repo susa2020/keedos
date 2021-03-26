@@ -25,7 +25,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-9 col-lg-12 col-xl-9 offset-sm-3 offset-md-1 offset-lg-1 offset-xl-1 item">
-                    <h1><img class="img-fluid" src="../assets/img/Dark.svg" width="120px" height="40px"></h1>
+                    <h1><img class="img-fluid" src="../assets/img/logo/logo_Dark_type.svg" width="120px" height="40px"></h1>
                     <ul>
                         <li><a href="#"></a></li>
                         <li><a href="#"></a></li>
