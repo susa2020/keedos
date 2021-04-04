@@ -141,13 +141,13 @@ check_logged_out();
           </div>
           <div class="col-md-4"><i class="fa fa-star" style="background: url(&quot;../assets/img/04.svg&quot;) center / contain no-repeat;width: 35px;height: 35px;color: rgba(33,37,41,0);font-size: 0px;"></i>
             <h2>自動生成履歷</h2>
-            <p>透過回答問卷 <br>來完成屬於自己的履歷</p><a href="#">查看更多<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="color: #f08b33;margin-top: -4px;">
+            <p>透過回答問卷<br>來完成屬於自己的履歷</p><a href="#">查看更多<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="color: #f08b33;margin-top: -4px;">
                 <path d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z" fill="currentColor"></path>
               </svg></a>
           </div>
           <div class="col-md-4"><i class="fa fa-star" style="background: url(&quot;../assets/img/3.svg&quot;) center / contain no-repeat;width: 35px;height: 35px;color: rgba(33,37,41,0);font-size: 0px;"></i>
             <h2>人才資料庫</h2>
-            <p>透過資料庫中的履歷<br> 尋找出最適合的人選</p><a href="#">查看更多<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="color: #f08b33;margin-top: -4px;">
+            <p>透過資料庫中的履歷<br>尋找出最適合的人選</p><a href="#">查看更多<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="color: #f08b33;margin-top: -4px;">
                 <path d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z" fill="currentColor"></path>
               </svg></a>
           </div>
@@ -165,7 +165,7 @@ check_logged_out();
       <div class="row use">
         <div class="col text-center align-self-center use"><a class="btn btn-primary" role="button" style="text-align: center;" href="../register">立即使用</a></div>
       </div>
-      
+
     </div>
   </div>
 
