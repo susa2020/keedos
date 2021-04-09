@@ -210,14 +210,14 @@
 
 @media (min-width: 767px) {
   .susa-banner {
-    background: url("../../assets/img/banner_logo.jpg") center / cover no-repeat;
-    height: 600px;
+    background: url("../../assets/img/logowhole.svg") center / auto no-repeat;
+    height: 400px;
   }
 }
 
 @media (max-width: 767px) {
   .susa-banner {
-    background: url("../../assets/img/banner_logo.jpg") center / cover no-repeat;
+    background: url("../../assets/img/logowhole.svg") center / contain no-repeat;
     height: 300px;
   }
 }
