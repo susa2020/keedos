@@ -44,8 +44,19 @@ require '../../assets/includes/security_functions.php';
     require("../../assets/vendor/PHPDatabase/easyCRUD/Person.class.php");
     $name = $_POST['name'];
     $gender = $_POST['gender'];
-    $experience = $_POST['experience'];
-    $keyword = $_POST['keyword'];
+    $age = $_POST['age'];
+    $hashtag1 = $_POST['hashtag1'];
+    $hashtag2 = $_POST['hashtag2'];
+    $hashtag3 = $_POST['hashtag3'];
+    $keyword = $hashtag1.$hashtag2.$hashtag3;
+    $job_title = $_POST['job_title'];
+    $eng_level = $_POST['eng_level'];
+    $email = $_POST['email'];
+    $social_media = $_POST['social_media'];
+    $phone = $_POST['phone'];
+    $portfolio = $_POST['portfolio'];
+    $self_intro = $_POST['self_intro'];
+
 
     // Instantiate the person class
     $person  = new Person();
