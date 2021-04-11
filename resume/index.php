@@ -15,42 +15,131 @@ $person->Find();
 
 function d($v, $t = "")
 {
-   echo '<div class="form-group">';
 
-   echo '<input class="form-control" value=' . $v. ' type="text" name="name" placeholder="Name">';
-   //var_dump($v);
-   echo '</div>';
+   echo '<input class="form-control item" value=' . $v. ' type="text" id="name" placeholder="" name='.$t . ' style="margin-bottom: 0px;padding-bottom: 0px;padding-top: 0px;border-radius: 16px;border-style: none;border-color: rgba(239,139,50,0);background: rgb(239,241,246);" required="" readonly="" disabled="">';
+
+}
+
+function d_textarea($v, $t = "")
+{
+
+   echo '<p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">' . $v. '</p>>';
+
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Untitled</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="../assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="../assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="../assets/css/resume-edit.css">
 </head>
 
 <body>
-    <section class="contact-clean">
-        <form method="post">
-            <?php insert_csrf_token(); ?>
-            <h2 class="text-center">Contact us</h2>
-            <div class="form-group"><input class="form-control"  type="text" name="name" placeholder="Name"></div>
-            <div class="form-group"><textarea class="form-control" name="gender" placeholder="gender" rows="14"></textarea></div>
-            <div class="form-group"><textarea class="form-control" name="experience" placeholder="experience" rows="14"></textarea></div>
-            <div class="form-group"><textarea class="form-control" name="keyword" placeholder="keyword" rows="14"></textarea></div>
-            <div class="form-group"><button class="btn btn-primary" type="submit" value="resumesubmit">send </button></div>
 
-            <?php d($person->Name, ""); ?>
-        </form>
-    </section>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <div class="resume-section">
+        <div class="resume-form" style="opacity: 1;">
+            <form method="post" action="includes/edit-resume.inc.php" style="border-style: none;padding-right: 20px;padding-left: 20px;"><img src="../assets/img/1.jpg">
+              <?php insert_csrf_token(); ?>
+                <div class="container">
+                    <div class="form-row" style="margin-right: -5px;">
+                        <div class="col-sm-12 col-md-4 col-lg-8" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
+                            <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
+                                <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);font-family: FakePearl;">姓名</p>
+                                  <?php d($person->Name, "name"); ?>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-2" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
+                            <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
+                                <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">性別</p>
+                                <?php d($person->Gender, "gender"); ?>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-2" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
+                            <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
+                                <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">年齡</p>
+                                <?php d($person->Age, "age"); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="form-row">
+                        <div class="col-md-4 col-xl-12" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
+                            <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
+                                <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">#Hashtag</p>
+                                <?php d($person->Keyword, "keyword"); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="form-row">
+                        <div class="col-md-8 col-lg-8" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
+                            <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
+                                <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">學籍或職稱</p>
+                                <?php d($person->Job_title, "job_title"); ?>
+                            </div>
+                        </div>
+                        <div class="col-md-4" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
+                            <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
+                                <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">工作方式</p>
+                                <?php d($person->Work_way, "work_way"); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="form-row">
+                        <div class="col-md-6 col-lg-6" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
+                            <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
+                                <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">E-mail</p>
+                                <?php d($person->Email, "email"); ?>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
+                            <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
+                                <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">社群帳號</p>
+                                <?php d($person->Social_Media, "social_media"); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 col-lg-6 col-xl-6" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
+                            <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
+                                <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">電話</p>
+                                <?php d($person->Phone, "phone"); ?>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-6" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
+                            <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
+                                <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">作品集連結</p>
+                                <?php d($person->Portfolio, "portfolio"); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="form-row">
+                        <div class="col-md-12 col-lg-12 col-xl-12" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
+                            <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
+                                <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">自我介紹</p>
+                                <?php d_textarea($person->Introduction, ""); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
 </body>
 
 </html>

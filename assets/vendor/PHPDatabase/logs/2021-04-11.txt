@@ -1,0 +1,11 @@
+Time : 17:59:36
+SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'ytre' for column `klik_loginsystem`.`resume`.`Age` at row 1
+Raw SQL : INSERT INTO resume (Name,Gender,Keyword,Age,Job_title,Work_way,Email,Social_Media,Phone,Portfolio,Introduction) VALUES (:Name,:Gender,:Keyword,:Age,:Job_title,:Work_way,:Email,:Social_Media,:Phone,:Portfolio,:Introduction)
+
+Time : 17:47:46
+SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'jhgfd' for column `klik_loginsystem`.`resume`.`Phone` at row 1
+Raw SQL : INSERT INTO resume (Name,Gender,Keyword,Age,Job_title,Work_way,Email,Social_Media,Phone,Portfolio,Introduction) VALUES (:Name,:Gender,:Keyword,:Age,:Job_title,:Work_way,:Email,:Social_Media,:Phone,:Portfolio,:Introduction)
+
+Time : 17:08:02
+SQLSTATE[HY000]: General error: 1364 Field 'Job_title' doesn't have a default value
+Raw SQL : INSERT INTO resume (Name,Keyword,Gender,Experience) VALUES (:Name,:Keyword,:Gender,:Experience)

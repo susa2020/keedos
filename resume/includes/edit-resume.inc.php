@@ -44,17 +44,36 @@ require '../../assets/includes/security_functions.php';
     require("../../assets/vendor/PHPDatabase/easyCRUD/Person.class.php");
     $name = $_POST['name'];
     $gender = $_POST['gender'];
-    $experience = $_POST['experience'];
-    $keyword = $_POST['keyword'];
+    $age = $_POST['age'];
+    $hashtag1 = $_POST['hashtag1'];
+    $hashtag2 = $_POST['hashtag2'];
+    $hashtag3 = $_POST['hashtag3'];
+    $keyword = $hashtag1.$hashtag2.$hashtag3;
+    $job_title = $_POST['job_title'];
+    $work_way = $_POST['work_way'];
+    $email = $_POST['email'];
+    $social_media = $_POST['social_media'];
+    $phone = $_POST['phone'];
+    $portfolio = $_POST['portfolio'];
+    $self_intro = $_POST['self_intro'];
+
 
     // Instantiate the person class
     $person  = new Person();
 
     // Create new person
     $person->Name = $name;
-    $person->Keyword  = $keyword;
     $person->Gender = $gender;
-    $person->Experience = $experience;
+    $person->Keyword  = $keyword;
+    $person->Age = $age;
+    $person->Job_title = $job_title;
+    $person->Work_way = $work_way;
+    $person->Email = $email;
+    $person->Social_Media = $social_media;
+    $person->Phone = $phone;
+    $person->Portfolio = $portfolio;
+    $person->Introduction = $self_intro;
+    //$person->Experience = $experience;
     $creation = $person->Create();
     header("Location: ../");
 
