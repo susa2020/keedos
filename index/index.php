@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <?php
-
+ob_start();
 define('TITLE', "index");
 include '../assets/layouts/header.php';
-check_logged_out();
+//check_logged_out();
 ?>
 <!DOCTYPE html>
 <html>

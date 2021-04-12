@@ -1,7 +1,8 @@
 <?php
-
+ob_start();
 define('TITLE', "edit resume");
 include '../assets/layouts/header.php';
+check_logged_in();
 ?>
 
 <!DOCTYPE html>

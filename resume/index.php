@@ -1,8 +1,9 @@
 <?php
-
+ob_start();
 define('TITLE', "show resume");
 include '../assets/layouts/header.php';
 require("../assets/vendor/PHPDatabase/easyCRUD/Person.class.php");
+check_logged_in();
 
 $resumeID = $_GET["id"];
 
