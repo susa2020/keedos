@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 define('TITLE', "Edit Profile");
 include '../assets/layouts/header.php';
 check_verified();
@@ -144,7 +144,7 @@ function xss_filter($data) {
                     </div>
 
                     <button class="btn btn-lg btn-primary btn-block mb-5" type="submit" name='update-profile'>Confirm Changes</button>
-                
+
             </form>
 
         </div>

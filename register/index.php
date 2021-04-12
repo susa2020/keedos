@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 define('TITLE', "Signup");
 include '../assets/layouts/header.php';
 check_logged_out();

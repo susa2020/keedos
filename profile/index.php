@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 define('TITLE', "Profile");
 include '../assets/layouts/header.php';
 check_verified();
@@ -24,7 +24,7 @@ check_verified();
                             <?php if ($_SESSION['gender'] == 'm'){ ?>
 
                             <i class="fa fa-male"></i>
-                            
+
 
                             <?php } elseif ($_SESSION['gender'] == 'f'){ ?>
 
@@ -51,8 +51,8 @@ check_verified();
 <div class="row bio">
 
     <div class="col-xl-6 col-md-9 col-sm-12 mx-auto">
-    
-    <?php echo $_SESSION['bio']; ?> 
+
+    <?php echo $_SESSION['bio']; ?>
 
     </div>
 

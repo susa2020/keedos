@@ -84,7 +84,7 @@ require '../../assets/includes/security_functions.php';
     //$last_id = mysqli_insert_id($link);
     //$db->query("SELECT LAST_INSERT_ID 'resume'" );
     //echo $resume_id;
-
+    
 
     header("Location: ../../resume/?id=".$last_id);
 
