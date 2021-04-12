@@ -138,9 +138,7 @@ function d_textarea($v, $t = "")
             </form>
         </div>
     </div>
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+
 </body>
 
 </html>
