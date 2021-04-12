@@ -1,0 +1,3 @@
+Time : 08:49:27
+SQLSTATE[HY000]: General error: 1364 Field 'Job_title' doesn't have a default value
+Raw SQL : INSERT INTO resume (Name,Keyword,Gender,Birth,Phone,Email,Social_Media) VALUES (:Name,:Keyword,:Gender,:Birth,:Phone,:Email,:Social_Media)
