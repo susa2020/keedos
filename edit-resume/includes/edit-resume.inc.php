@@ -78,13 +78,7 @@ require '../../assets/includes/security_functions.php';
 
 
 
-
-    //require("../../assets/vendor/PHPDatabase/Db.class.php");
-    //$db = new Db();
-    //$firstname = $db->single("SELECT firstname FROM Persons WHERE id = :id");
-    //$resume_id = mysqli_query("SELECT LAST_INSERT_ID 'resume'");
-
-    $last_id = $person->exec("SELECT LAST_INSERT_ID 'resume'");
+    $last_id = $person->lastInsertId();
     echo "Records inserted successfully. Last inserted ID is: " . $last_id;
 
     //$last_id = mysqli_insert_id($link);
@@ -92,7 +86,7 @@ require '../../assets/includes/security_functions.php';
     //echo $resume_id;
 
 
-    header("Location: ../");
+    header("Location: ../../resume/?id=".$last_id);
 
 
 

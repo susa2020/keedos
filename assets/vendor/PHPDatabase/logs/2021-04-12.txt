@@ -1,3 +1,7 @@
+Time : 15:24:40
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LAST_INSERT_ID' in 'field list'
+Raw SQL : SELECT LAST_INSERT_ID 'resume'
+
 Time : 11:00:05
 SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LAST_INSERT_ID' in 'field list'
 Raw SQL : SELECT LAST_INSERT_ID 'resume'

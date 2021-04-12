@@ -165,8 +165,16 @@ class Crud {
 		return $this->db->single("SELECT count(" . $field . ")" . " FROM " . $this->table);
 	}
 
+	/**
+	 *  Returns the last inserted id.
+	 *  @return string
+	 */
+	public function lastInsertId()
+	{
+			return $this->db->lastInsertId();
+	}
 
-	public function exec($sql, $array = null) {
+	private function exec($sql, $array = null) {
 
 		if($array !== null) {
 			// Get result with the DB object
