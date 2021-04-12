@@ -1,8 +1,9 @@
 <?php
-
+ob_start();
 define('TITLE', "show resume");
 include '../assets/layouts/header.php';
 require("../assets/vendor/PHPDatabase/easyCRUD/Person.class.php");
+check_logged_in();
 
 $resumeID = $_GET["id"];
 
@@ -16,14 +17,14 @@ $person->Find();
 function d($v, $t = "")
 {
 
-   echo '<input class="form-control item" value=' . $v. ' type="text" id="name" placeholder="" name='.$t . ' style="margin-bottom: 0px;padding-bottom: 0px;padding-top: 0px;border-radius: 16px;border-style: none;border-color: rgba(239,139,50,0);background: rgb(239,241,246);" required="" readonly="" disabled="">';
+   echo '<input class="form-control item" value="' . $v. '" type="text" id="name" placeholder="" name='.$t . ' style="margin-bottom: 0px;padding-bottom: 0px;padding-top: 0px;border-radius: 16px;border-style: none;border-color: rgba(239,139,50,0);background: rgb(239,241,246);" required="" readonly="" disabled="">';
 
 }
 
 function d_textarea($v, $t = "")
 {
 
-   echo '<p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">' . $v. '</p>>';
+   echo '<p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);" >' . $v. '</p>';
 
 }
 ?>
@@ -137,9 +138,7 @@ function d_textarea($v, $t = "")
             </form>
         </div>
     </div>
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+
 </body>
 
 </html>

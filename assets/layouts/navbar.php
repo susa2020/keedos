@@ -68,6 +68,7 @@ if (session_id() == '') {
             <a class="btn btn-light action-button" role="button" href="../register">註冊</a>
 
              <?php }else{ ?>
+            <a class="login" href="../dev_link">測試</a>
             <a class="login" href="../login">後台</a>
             <a class="btn btn-light action-button" role="button" href="../logout">登出</a>
              <?php } ?>
@@ -82,7 +83,6 @@ if (session_id() == '') {
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
-
 
 
 
