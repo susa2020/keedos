@@ -84,7 +84,15 @@ require '../../assets/includes/security_functions.php';
     //$last_id = mysqli_insert_id($link);
     //$db->query("SELECT LAST_INSERT_ID 'resume'" );
     //echo $resume_id;
-    
+
+    require("../../assets/vendor/PHPDatabase/easyCRUD/ResumeOwner.class.php");
+    $owner = new ResumeOwner();
+
+    $owner->user_id =$_SESSION['id'];
+    $owner->resume_id = $last_id;
+    $creation = $owner->Create();
+    //echo "user_id: " . $_SESSION['id'];
+
 
     header("Location: ../../resume/?id=".$last_id);
 
