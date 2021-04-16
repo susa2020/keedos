@@ -1,0 +1,11 @@
+Time : 08:37:10
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'klik_loginsystem.Persons' doesn't exist
+Raw SQL : SELECT * FROM Persons WHERE Name = :Name AND Keyword = :Keyword
+
+Time : 08:37:07
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'klik_loginsystem.Persons' doesn't exist
+Raw SQL : SELECT * FROM Persons WHERE Name = :Name AND Keyword = :Keyword
+
+Time : 08:34:47
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'klik_loginsystem.Persons' doesn't exist
+Raw SQL : SELECT * FROM Persons WHERE Name = :Name AND Keyword = :Keyword
