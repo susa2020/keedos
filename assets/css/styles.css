@@ -507,3 +507,11 @@ body {
   font-family: "FakePearl-Regular" !important;
 }
 
+#image-404 {
+  background: url("../../assets/img/undraw_Raining_re_4b55%201.svg") center / contain no-repeat;
+  height: 350px;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+

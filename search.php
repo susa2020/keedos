@@ -33,6 +33,19 @@ if (session_id() == '') {
 <!-- Search Form Demo -->
 <div style="clear: both">
     <input type="text" class='mySearch' id="ls_query" placeholder="Type to start searching ...">
+    <script>
+    jQuery(document).ready(function(){
+        jQuery(".mySearch").ajaxlivesearch({
+            loaded_at: <?php echo time(); ?>,
+            token: <?php echo "'" . $handler->getToken() . "'"; ?>,
+            max_input: <?php echo Config::getConfig('maxInputLength'); ?>,
+
+                 jQuery("c").trigger('ajaxlivesearch:search', {query: 'test'});
+                // jQuery("#ls_query").renderView('ajaxlivesearch:search', {query: 'test'});
+
+        });
+    })
+    </script>
 </div>
 <!-- /Search Form Demo -->
 
@@ -57,11 +70,11 @@ jQuery(document).ready(function(){
 
             // hide the result
             jQuery("#ls_query").trigger('ajaxlivesearch:hide_result');
-            window.location.href="../resume/?id="+selectedOne; 
+            window.location.href="../resume/?id="+selectedOne;
         },
         onResultEnter: function(e, data) {
             // do whatever you want
-            // jQuery("#ls_query").trigger('ajaxlivesearch:search', {query: 'test'});
+             jQuery("#ls_query").trigger('ajaxlivesearch:search', {query: 'test'});
         },
         onAjaxComplete: function(e, data) {
 
