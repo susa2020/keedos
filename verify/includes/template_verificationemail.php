@@ -299,32 +299,29 @@ body {
 
 </head>
 
+
 <body>
-  <section class="team-boxed" style="background: #eef4f7;">
-    <div class="container team">
-      <div class="row people-first">
-        <div class="col-md-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2 item">
-          <div class="box">
-            <div class="row">
-              <div class="col-8 col-sm-5 col-md-4 col-lg-3 col-xl-3" style="padding-bottom: 20px;"><img class="img-fluid" src="https://keedos.me/assets/img/Keedos_full_rectangle.png"></div>
+    <section class="team-boxed" style="background: #eef4f7;">
+        <div class="container team">
+            <div class="col-md-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2 item" style="padding-top: 50px;">
+                <div class="box">
+                    <div class="row">
+                        <div class="col-8 col-sm-5 col-md-4 col-lg-3 col-xl-3" style="padding-bottom: 20px;"><img class="img-fluid" src="https://keedos.me/assets/img/Keedos_full_rectangle.png"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12 offset-xl-0">
+                            <h1 class="name" style="text-align: left;">驗證您的電子信箱<br></h1>
+                            <p class="description" style="text-align: left;font-size: 18px;">歡迎你使用Keedos!<br>為了確認你是真人，請點擊下方按鈕以開始使用Keedos夥伴搜尋服務，謝謝！<br>Best regards,<br>Keedos<br><br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 col-sm-3 col-md-3 col-lg-3 offset-xl-0"><a class="btn btn-primary text-center" role="button" id="title-button" href="{{ url }}" style="font-family: Poppins, sans-serif;">驗證信箱<br></a></div>
+                    </div>
+                </div>
+                <p class="lead" style="text-align: center;"><br>© 2021 Keedos. Team 保留一切權利<br> 還有任何疑問嗎？ 現在就聯絡我們！<br><br></p>
             </div>
-            <div class="row">
-              <div class="col-md-12 col-xl-11 offset-xl-0">
-                <h1 class="name" style="text-align: left;">驗證您的電子信箱<br></h1>
-                <p class="description" style="text-align: left;font-size: 18px;">歡迎你使用Keedos!<br>為了確認你是真人，請點擊下方按鈕以開始使用Keedos夥伴搜尋服務，謝謝！<br>Best regards,<br>Keedos<br><br></p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-5 col-sm-3 col-md-3 col-lg-3"><a class="btn btn-primary text-center" role="button" id="title-button" href="{{ url }}" style="font-family: Poppins, sans-serif;">驗證信箱<br></a></div>
-            </div>
-          </div>
         </div>
-        <div class="col-xl-12">
-          <p style="text-align: center;"><br>© 2021 Keedos. Team 保留一切權利<br> 還有任何疑問嗎？ 現在就聯絡我們！<br><br></p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
 </body>
 
