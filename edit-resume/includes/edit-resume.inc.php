@@ -54,8 +54,12 @@ require '../../assets/includes/security_functions.php';
     $email = $_POST['email'];
     $social_media = $_POST['social_media'];
     $phone = $_POST['phone'];
-    $portfolio = $_POST['portfolio'];
+    $pro_link = $_POST['pro-link'];
+    //$portfolio = $_POST['portfolio'];
+    $if_other_org = $_POST['if-other-org'];
+    $location = $_POST['location'];
     $self_intro = $_POST['self_intro'];
+    $experience = $_POST['experience'];
 
 
     // Instantiate the person class
@@ -71,9 +75,12 @@ require '../../assets/includes/security_functions.php';
     $person->Email = $email;
     $person->Social_Media = $social_media;
     $person->Phone = $phone;
-    $person->Portfolio = $portfolio;
+    $person->Pro_link = $pro_link;
+    //$person->Portfolio = $portfolio;
+    $person->If_other_org = $if_other_org;
+    $person->Location = $location;
     $person->Introduction = $self_intro;
-    //$person->Experience = $experience;
+    $person->Experience = $experience;
     $creation = $person->Create();
 
 

@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 define('TITLE', "Home");
 include '../assets/layouts/header.php';
 check_verified();
@@ -53,7 +53,7 @@ check_verified();
                         Or maybe use this for other functionality, although that is not recommended.
                     </p>
                 </div>
-                
+
                 <small class="d-block text-right mt-3">
                     <a href="#">All updates</a>
                 </small>

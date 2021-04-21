@@ -25,12 +25,14 @@ function check_logged_in_butnot_verified(){
         elseif ($_SESSION['auth'] == 'verified') {
 
             header("Location: ../home/");
+            ob_end_flush();//防止Headers already sent
             exit();
         }
     }
     else {
 
         header("Location: ../login/");
+        ob_end_flush();//防止Headers already sent
         exit();
     }
 }
@@ -61,12 +63,14 @@ function check_verified() {
         elseif ($_SESSION['auth'] == 'loggedin') {
 
             header("Location: ../verify/");
+            ob_end_flush();//防止Headers already sent
             exit();
         }
     }
     else {
 
         header("Location: ../login/");
+        ob_end_flush();//防止Headers already sent
         exit();
     }
 }

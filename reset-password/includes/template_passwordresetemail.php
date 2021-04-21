@@ -1,265 +1,327 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Email 驗證</title>
+  <!--
+  <link rel="stylesheet" href="https://keedos.me/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="https://keedos.me/assets/css/about-susa.css">
+  <link rel="stylesheet" href="https://keedos.me/assets/css/Registration-Form-with-Photo.css">
+  <link rel="stylesheet" href="https://keedos.me/assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">-->
+  <style type="text/css">
+  :root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace
+}
 
-    <title>Reset Your Email</title>
+*,::after,::before {
+    box-sizing: border-box
+}
 
-    <style type="text/css">
-        body {
-            width: 100%;
-            background-color: #ffffff;
-            margin: 0;
-            margin-top: 70px;
-            padding: 0;
-            -webkit-font-smoothing: antialiased;
-        }
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent
+}
 
-        p,
-        h1,
-        h2,
-        h3,
-        h4 {
-            margin-top: 0;
-            margin-bottom: 0;
-            padding-top: 0;
-            padding-bottom: 0;
-        }
+article,aside,figcaption,figure,footer,header,hgroup,main,nav,section {
+    display: block
+}
 
-        span.preheader {
-            display: none;
-            font-size: 1px;
-        }
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff
+}
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    margin-bottom: .5rem
+}
 
-        html {
-            width: 100%;
-        }
+p {
+    margin-top: 0;
+    margin-bottom: 1rem
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent
+}
+img {
+    vertical-align: middle;
+    border-style: none
+}
+[role=button] {
+    cursor: pointer
+}
+.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2
+}
 
-        table {
-            font-size: 14px;
-            border: 0;
-        }
-        /* ----------- responsivity ----------- */
+.h1,h1 {
+    font-size: 2.5rem
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto
+}
+.container,.container-fluid,.container-lg,.container-md,.container-sm,.container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+.container,.container-sm {
+     max-width:540px
+ }
+ .container,.container-md,.container-sm {
+        max-width:720px
+    }
+    .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px
+}
 
-        @media only screen and (max-width: 640px) {
-            /*------ top header ------ */
-            .main-header {
-                font-size: 20px !important;
-            }
-            .main-section-header {
-                font-size: 28px !important;
-            }
-            .show {
-                display: block !important;
-            }
-            .hide {
-                display: none !important;
-            }
-            .align-center {
-                text-align: center !important;
-            }
-            .no-bg {
-                background: none !important;
-            }
-            /*----- main image -------*/
-            .main-image img {
-                width: 440px !important;
-                height: auto !important;
-            }
-            /* ====== divider ====== */
-            .divider img {
-                width: 440px !important;
-            }
-            /*-------- container --------*/
-            .container590 {
-                width: 440px !important;
-            }
-            .container580 {
-                width: 400px !important;
-            }
-            .main-button {
-                width: 220px !important;
-            }
-            /*-------- secions ----------*/
-            .section-img img {
-                width: 320px !important;
-                height: auto !important;
-            }
-            .team-img img {
-                width: 100% !important;
-                height: auto !important;
-            }
-        }
+.col-lg-12,.col-lg-5,.col-lg-6,.col-lg-7,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-auto,.col-sm,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-auto,.col-xl,.col-xl-1,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px
+}
+.col-5 {
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%
+}
 
-        @media only screen and (max-width: 479px) {
-            /*------ top header ------ */
-            .main-header {
-                font-size: 18px !important;
-            }
-            .main-section-header {
-                font-size: 26px !important;
-            }
-            /* ====== divider ====== */
-            .divider img {
-                width: 280px !important;
-            }
-            /*-------- container --------*/
-            .container590 {
-                width: 280px !important;
-            }
-            .container590 {
-                width: 280px !important;
-            }
-            .container580 {
-                width: 260px !important;
-            }
-            /*-------- secions ----------*/
-            .section-img img {
-                width: 280px !important;
-                height: auto !important;
-            }
-        }
-    </style>
+.col-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%
+}
+.col-sm-3 {
+     -ms-flex: 0 0 25%;
+     flex: 0 0 25%;
+     max-width: 25%
+ }
+
+ .col-sm-5 {
+     -ms-flex: 0 0 41.666667%;
+     flex: 0 0 41.666667%;
+     max-width: 41.666667%
+ }
+ .col-md-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%
+}
+
+.col-md-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%
+}
+.col-md-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer
+}
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff
+}
+#title-button {
+    border-radius: 40px;
+    width: 156px;
+    background: #f08b33;
+    color: rgb(255, 255, 255);
+    font-family: FakePearl;
+    font-size: 20px;
+    height: 56px;
+    padding: 15px;
+}
+body {
+    font-family: "FakePearl-Regular" !important;
+}
+.team-boxed {
+    color: #313437;
+    background-color: #eef4f7;
+}
+
+.team-boxed p {
+    color: #7d8285;
+}
+.team-boxed .people-first, .people {
+     padding-right: 0px;
+     padding-top: 20px;
+     padding-bottom: 50px;
+     padding-left: 0px;
+ }
+ .team-boxed .item {
+    text-align: center;
+}
+
+.team-boxed .item .box {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+.team-boxed .item .name {
+    font-weight: bold;
+    margin-top: 28px;
+    margin-bottom: 8px;
+    color: inherit;
+}
+.team-boxed .item .description {
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.team-boxed .item img {
+    max-width: 160px;
+}
+.text-center {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 36px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #14142B;
+}
+.btn:not(:disabled):not(.disabled) {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.75px;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+  </style>
+
 
 </head>
-<body class="respond" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-
-<table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="ffffff" class="bg_color">
-
-    <tr>
-        <td align="center">
-            <table border="0" align="center" width="590" cellpadding="0" cellspacing="0" class="container590">
-                <tr>
-                    <td height="20" style="font-size: 20px; line-height: 20px;">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td align="center" style="color: #343434; font-size: 24px; font-family: Quicksand, Calibri, sans-serif; font-weight:700;letter-spacing: 3px; line-height: 35px;"
-                        class="main-header">
 
 
-                        <div style="line-height: 35px">
-
-                            <span style="color: #5caad2;">{{ APP_NAME }}:</span> Reset Your Password
-
+<body>
+    <section class="team-boxed" style="background: #eef4f7;">
+        <div class="container team">
+            <div class="col-md-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2 item" style="padding-top: 50px;">
+                <div class="box">
+                    <div class="row">
+                        <div class="col-8 col-sm-5 col-md-4 col-lg-3 col-xl-3" style="padding-bottom: 20px;"><img class="img-fluid" src="https://keedos.me/assets/img/Keedos_full_rectangle.png"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12 offset-xl-0">
+                            <h1 class="name" style="text-align: left;"><strong>重置您的密碼</strong><br></h1>
+                            <p class="description" style="text-align: left;font-size: 18px;">忘記密碼真的是一件令人傷心的事情<br>我們非常抱歉為你的使用體驗帶來不便<br>還請您幫我們點擊下方按鈕以重置您的密碼，謝謝！<br><br>Best regards,<br>Keedos.<br><br></p>
                         </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td height="10" style="font-size: 10px; line-height: 10px;">&nbsp;</td>
-                </tr>
-
-                <tr>
-                    <td align="center">
-                        <table border="0" width="40" align="center" cellpadding="0" cellspacing="0" bgcolor="eeeeee">
-                            <tr>
-                                <td height="2" style="font-size: 2px; line-height: 2px;">&nbsp;</td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td height="20" style="font-size: 20px; line-height: 20px;">&nbsp;</td>
-                </tr>
-
-                <tr>
-                    <td align="center">
-                        <table border="0" width="400" align="center" cellpadding="0" cellspacing="0" class="container590">
-                            <tr>
-                                <td align="center" style="color: #888888; font-size: 16px; font-family: 'Work Sans', Calibri, sans-serif; line-height: 24px;">
-
-
-                                    <div style="line-height: 24px">
-                                        You recently requested for a password reset on {{ APP_NAME }} with the email [{{ email }}]. Please use below button 
-                                        to reset your account password.
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td height="25" style="font-size: 25px; line-height: 25px;">&nbsp;</td>
-                </tr>
-
-                <tr>
-                    <td align="center">
-                        <table border="0" align="center" width="160" cellpadding="0" cellspacing="0" bgcolor="5caad2">
-
-                            <tr>
-                                <td height="10" style="font-size: 10px; line-height: 10px;">&nbsp;</td>
-                            </tr>
-
-                            <tr>
-                                <td align="center" style="color: #ffffff; font-size: 14px; font-family: 'Work Sans', Calibri, sans-serif; line-height: 26px;">
-
-
-                                    <div style="line-height: 26px;">
-                                        <a href="{{ url }}" style="color: #ffffff; text-decoration: none;">Reset Password</a>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td height="10" style="font-size: 10px; line-height: 10px;">&nbsp;</td>
-                            </tr>
-
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td height="25" style="font-size: 25px; line-height: 25px;">&nbsp;</td>
-                </tr>
-
-                <tr>
-                    <td align="center">
-                        <table border="0" width="400" align="center" cellpadding="0" cellspacing="0" class="container590">
-                            <tr>
-                                <td align="center" style="color: #888888; font-size: 16px; font-family: 'Work Sans', Calibri, sans-serif; line-height: 24px;">
-                                    <div style="line-height: 24px">
-                                        If above button does not work, copy the link given below and paste into your browser.
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td height="25" style="font-size: 25px; line-height: 25px;">&nbsp;</td>
-                </tr>
-
-                <tr>
-                    <td align="center">
-                        <table border="0" width="400" align="center" cellpadding="0" cellspacing="0" class="container590">
-                            <tr>
-                                <td align="center" style="color: #888888; font-size: 16px; font-family: 'Work Sans', Calibri, sans-serif; line-height: 24px;">
-                                    <div style="line-height: 24px">
-                                        <a href="{{ url }}">{{ url }}</a> 
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-            </table>
-
-        </td>
-    </tr>
-
-    <tr class="hide">
-        <td height="25" style="font-size: 25px; line-height: 25px;">&nbsp;</td>
-    </tr>
-    <tr>
-        <td height="40" style="font-size: 40px; line-height: 40px;">&nbsp;</td>
-    </tr>
-
-</table>
-
+                    </div>
+                    <div class="row">
+                        <div class="col-5 col-sm-3 col-md-3 col-lg-3 offset-xl-0"><a class="btn btn-primary text-center" role="button" id="title-button" href="{{ url }}" style="font-family: Poppins, sans-serif;">重置密碼<br></a></div>
+                    </div>
+                </div>
+                <p class="lead" style="text-align: center;"><br>© 2021 Keedos. Team 保留一切權利<br> 還有任何疑問嗎？ 現在就聯絡我們！<br><br></p>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>

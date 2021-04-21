@@ -1,8 +1,8 @@
 <?php
-
+ob_start();
 define('TITLE', "Verify Email");
 include '../assets/layouts/header.php';
-check_logged_in_butnot_verified(); 
+check_logged_in_butnot_verified();
 
 ?>
 
@@ -20,7 +20,7 @@ check_logged_in_butnot_verified();
             <form action="includes/sendverificationemail.inc.php" method="post">
 
                 <?php insert_csrf_token(); ?>
-            
+
                 <h5 class="text-center mb-5 text-primary">Verify Your Email Address</h5>
 
                 <p>
