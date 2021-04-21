@@ -1,6 +1,12 @@
 <?php    
-include("class.phpmailer.php"); //匯入PHPMailer類別       
-      
+
+use PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+
+require '/assets/vendor/PHPMailer/src/Exception.php';
+require '/assets/vendor/PHPMailer/src/PHPMailer.php';
+require '/assets/vendor/PHPMailer/src/SMTP.php';
 $mail= new PHPMailer(); //建立新物件        
 $mail->IsSMTP(); //設定使用SMTP方式寄信        
 $mail->SMTPAuth = true; //設定SMTP需要驗證        
