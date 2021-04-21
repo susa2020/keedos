@@ -80,7 +80,7 @@ check_logged_in();
             </div>
             <div class="col-md-4" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
               <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
-                <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">工作方式</p><select class="form-control" style="border-style: none;border-top-style: none;" name="work-way" required="">
+                <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">工作方式</p><select class="form-control" style="border-style: none;border-top-style: none;" name="work_way" required="">
                   <option value="遠端工作">遠端工作</option>
                   <option value="線下協作">線下協作</option>
                 </select>
@@ -98,7 +98,7 @@ check_logged_in();
             </div>
             <div class="col-md-6 col-lg-6" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
               <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
-                <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">社群帳號(FB, IG)</p><input class="form-control item" type="text" id="email" placeholder="" name="social-media"
+                <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">社群帳號(FB, IG)</p><input class="form-control item" type="text" id="email" placeholder="" name="social_media"
                   style="border-style: none;border-color: var(--white);margin-bottom: 0px;padding-bottom: 0px;padding-top: 0px;border-radius: 16px;" required="">
               </div>
             </div>
@@ -159,7 +159,7 @@ check_logged_in();
           <div class="form-row">
             <div class="col-md-12 col-lg-12 col-xl-12" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
               <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
-                <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">自我介紹</p><textarea class="form-control" style="border-style: none;height: 150px;" name="self-intro" spellcheck="true"
+                <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">自我介紹</p><textarea class="form-control" style="border-style: none;height: 150px;" name="self_intro" spellcheck="true"
                   required=""></textarea>
               </div>
             </div>
