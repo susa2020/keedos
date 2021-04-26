@@ -1,8 +1,6 @@
 <?php
-
-$DS = DIRECTORY_SEPARATOR;
-file_exists(__DIR__ . $DS . 'core' . $DS . 'Handler.php') ? require_once __DIR__ . $DS . 'core' . $DS . 'Handler.php' : die('Handler.php not found');
-file_exists(__DIR__ . $DS . 'core' . $DS . 'Config.php') ? require_once __DIR__ . $DS . 'core' . $DS . 'Config.php' : die('Config.php not found');
+require "core/Handler.php";
+require "core/Config.php";
 
 use AjaxLiveSearch\core\Config;
 use AjaxLiveSearch\core\Handler;
@@ -16,8 +14,9 @@ if (session_id() == '') {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
+    <title></title>
     <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
     <!-- Live Search Styles -->
@@ -27,61 +26,12 @@ if (session_id() == '') {
     <link rel="stylesheet" href="css/fontello-ie7.css">
     <![endif]-->
     <link rel="stylesheet" type="text/css" href="css/ajaxlivesearch.min.css">
-</head>
-<body>
 
-<!-- Search Form Demo -->
-<div style="clear: both">
-    <input type="text" class='mySearch' id="ls_query" placeholder="Type to start searching ...">
-    <script>
-    jQuery(document).ready(function(){
-        jQuery(".mySearch").ajaxlivesearch({
-            loaded_at: <?php echo time(); ?>,
-            token: <?php echo "'" . $handler->getToken() . "'"; ?>,
-            max_input: <?php echo Config::getConfig('maxInputLength'); ?>,
-
-                 jQuery("c").trigger('ajaxlivesearch:search', {query: 'test'});
-                // jQuery("#ls_query").renderView('ajaxlivesearch:search', {query: 'test'});
-
-        });
-    })
-    </script>
-</div>
-<!-- /Search Form Demo -->
-
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery-1.11.1.min.js"></script>
-
-<!-- Live Search Script -->
-<script type="text/javascript" src="js/ajaxlivesearch.min.js"></script>
-
-<script>
-jQuery(document).ready(function(){
-    jQuery(".mySearch").ajaxlivesearch({
-        loaded_at: <?php echo time(); ?>,
-        token: <?php echo "'" . $handler->getToken() . "'"; ?>,
-        max_input: <?php echo Config::getConfig('maxInputLength'); ?>,
-        onResultClick: function(e, data) {
-            // get the index 0 (first column) value
-            var selectedOne = jQuery(data.selected).find('td').eq('0').text();
-
-            // set the input value
-            jQuery('#ls_query').val(selectedOne);
-
-            // hide the result
-            jQuery("#ls_query").trigger('ajaxlivesearch:hide_result');
-            window.location.href="../resume/?id="+selectedOne;
-        },
-        onResultEnter: function(e, data) {
-            // do whatever you want
-             jQuery("#ls_query").trigger('ajaxlivesearch:search', {query: 'test'});
-        },
-        onAjaxComplete: function(e, data) {
-
-        }
-    });
-})
-</script>
-
-</body>
+    <!-- Google Analytics-->
+    <!-- End Google Analytics-->
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.js"></script>
+    <script>ts('.ts.dropdown:not(.basic)').dropdown();</script>
+  </body>
 </html>
