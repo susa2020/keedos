@@ -2,7 +2,7 @@
 require "core/Handler.php";
 require "core/Config.php";
 
-use AjaxLiveSearch\core\Config;
+//use AjaxLiveSearch\core\Config;
 use AjaxLiveSearch\core\Handler;
 
 if (session_id() == '') {
