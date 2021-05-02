@@ -21,9 +21,14 @@ if (!empty($rows)) {
         $html .= '<tr>';
         foreach ($row as $columnName => $column) {
             if (is_array($column)) {
-              echo "<tr>";
-              echo "<td>" . $column['id'] . "</td>";
-              echo "</tr>";
+                $content = '';
+                foreach ($column as $aColumnKey => $aColumnValue) {
+                    $content .= "{$aColumnKey} : {$aColumnValue} ";
+                }
+
+                $content = htmlspecialchars($content);
+
+                $html .= "<td>{$content}</td>";
             } else {
                 $column = htmlspecialchars($column);
 
