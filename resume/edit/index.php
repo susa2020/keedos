@@ -1,7 +1,10 @@
 <?php
 ob_start();
 define('TITLE', "edit resume");
-include '../../assets/layouts/header.php';
+
+require( '../../file_dir_config.php' );
+include( VIEW_HEADER );
+//include '/assets/layouts/header.php';
 require("../../assets/vendor/PHPDatabase/easyCRUD/Person.class.php");
 check_logged_in();
 
