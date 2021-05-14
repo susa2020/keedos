@@ -1,12 +1,11 @@
 <?php
 ob_start();
-define('TITLE', "show resume");
-include '../assets/layouts/header.php';
-require("../assets/vendor/PHPDatabase/easyCRUD/Person.class.php");
+define('TITLE', "edit resume");
+include '../../assets/layouts/header.php';
+require("../../assets/vendor/PHPDatabase/easyCRUD/Person.class.php");
 check_logged_in();
 
 $resumeID = $_GET["id"];
-
 $person  = new Person();
 $person->id = $resumeID;
 $person->Find();
@@ -16,20 +15,19 @@ $person->Find();
 
 function d($v, $t = "")
 {
-  echo '<input class="form-control item" value="' . $v. '" type="text" id="name" placeholder="" name='.$t . ' style="margin-bottom: 0px;padding-bottom: 0px;padding-top: 0px;border-radius: 16px;border-style: none;border-color: rgba(239,139,50,0);background: rgb(239,241,246);text-align: left;" required="" readonly="" disabled="">';
+  //echo '<input class="form-control item" value="' . $v. '" type="text"  placeholder="" name='.$t . ' style="margin-bottom: 0px;padding-bottom: 0px;padding-top: 0px;border-radius: 16px;border-style: none;border-color: rgba(239,139,50,0);background: rgb(239,241,246);" required=""  disabled="">';
 
-  //echo '<input class="form-control" value="' . $v. '" type="text" name="name"  style="border-style: none;" disabled="">';
-  //echo '<input class="form-control item" value="' . $v. '"type="text"  name='.$t . ' style="border-style: none;border-color: var(--white);margin-bottom: 0px;padding-bottom: 0px;padding-top: 0px;border-radius: 16px;text-align: left;" disabled="" readonly="">';
+  echo '<input class="form-control item" value="' . $v. '"type="text"  name='.$t . ' style="border-style: none;border-color: var(--white);margin-bottom: 0px;padding-bottom: 0px;padding-top: 0px;border-radius: 16px;text-align: left;">';
+
 }
 
 function d_textarea($v, $t = "")
 {
 
-   echo '<p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);" >' . $v. '</p>';
-
+   //echo '<p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);" >' . $v. '</p>';
+   echo '<textarea class="form-control" value="' . $v. ' name='.$t . ' style="border-style: none;height: 100px;text-align: left;" name="hashtag_else" spellcheck="true" required=""></textarea>';
 }
 ?>
-
 
 <div class="resume-section"></div>
 <section class="team-boxed" style="background: #eef4f7;">
@@ -39,7 +37,7 @@ function d_textarea($v, $t = "")
         <div class="box">
           <div class="row">
             <div class="col" style="padding-right: 0px;padding-left: 0px;">
-              <form style="border-style: none;"><img class="rounded-circle img-fluid" src="../assets/img/1.jpg" loading="lazy" style="padding: 10px;padding-top: 20px;padding-bottom: 20px;width: 120px;">
+              <form method="post" action="includes/edit-resume.inc.php" style="border-style: none;"><img class="rounded-circle img-fluid" src="../../assets/img/1.jpg" loading="lazy" style="padding: 10px;padding-top: 20px;padding-bottom: 20px;width: 120px;">
                 <div class="container">
                   <div class="form-row" style="margin-right: -5px;">
                     <div class="col-sm-12 col-md-4 col-lg-8" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
@@ -67,13 +65,13 @@ function d_textarea($v, $t = "")
                     <div class="col-md-8 col-lg-8" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
                       <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
                         <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">就讀/畢業學校</p>
-                        <?php d($person->Job_title, "Job_title"); ?>
+                        <?php d($person->Job_title, "job_title"); ?>
                       </div>
                     </div>
                     <div class="col-md-4" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
                       <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
                         <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">工作方式</p>
-                        <?php d($person->Work_way, "Work_way"); ?>
+                        <?php d($person->Work_way, "work_way"); ?>
                       </div>
                     </div>
                   </div>
@@ -83,13 +81,13 @@ function d_textarea($v, $t = "")
                     <div class="col-md-6 col-lg-6" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
                       <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
                         <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">E-mail</p>
-                      	<?php d($person->Email, "Email"); ?>
+                      	<?php d($person->Email, "email"); ?>
                       </div>
                     </div>
                     <div class="col-md-6 col-lg-6" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
                       <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
                         <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">社群帳號(FB, IG)</p>
-                        <?php d($person->Social_Media, "Social_Media"); ?>
+                        <?php d($person->Social_Media, "social_media"); ?>
                       </div>
                     </div>
                   </div>
@@ -97,13 +95,13 @@ function d_textarea($v, $t = "")
                     <div class="col-md-6 col-lg-6 col-xl-6" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
                       <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
                         <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">電話</p>
-                        <?php d($person->Phone, "Phone"); ?>
+                        <?php d($person->Phone, "phone"); ?>
                       </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-6" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
                       <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
                         <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">專業連結(GitHub, LinkedIn...)</p>
-                        <?php d($person->Pro_link, "Pro_link"); ?>
+                        <?php d($person->Pro_link, "pro-link"); ?>
                       </div>
                     </div>
                   </div>
@@ -111,13 +109,13 @@ function d_textarea($v, $t = "")
                     <div class="col-md-6 col-lg-12 col-xl-6" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
                       <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
                         <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">現在是否為其他其他專案團隊的成員<br></p>
-                        <?php d($person->If_other_org, "If_other_org"); ?>
+                        <?php d($person->If_other_org, "if-other-org"); ?>
                       </div>
                     </div>
                     <div class="col-md-6 col-lg-12 col-xl-6" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
                       <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
                         <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">所在地區<br></p>
-                        <?php d($person->Location, "Location"); ?>
+                        <?php d($person->Location, "location"); ?>
                       </div>
                     </div>
                   </div>
@@ -127,19 +125,19 @@ function d_textarea($v, $t = "")
                     <div class="col-md-4" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
                       <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
                         <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">代表自己的三個關鍵字 #1<br></p>
-                        <?php d($person->Hashtag1, "Hashtag1"); ?>
+                        <?php d($person->Hashtag1, "hashtag1"); ?>
                       </div>
                     </div>
                     <div class="col-md-4" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
                       <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
                         <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">代表自己的三個關鍵字 #2</p>
-                        <?php d($person->Hashtag2, "Hashtag2"); ?>
+                        <?php d($person->Hashtag2, "hashtag2"); ?>
                       </div>
                     </div>
                     <div class="col-md-4" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
                       <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
                         <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">代表自己的三個關鍵字 #3<br></p>
-                        <?php d($person->Hashtag3, "Hashtag3"); ?>
+                        <?php d($person->Hashtag3, "hashtag3"); ?>
                       </div>
                     </div>
                   </div>
@@ -149,7 +147,7 @@ function d_textarea($v, $t = "")
                     <div class="col-md-12 col-lg-12 col-xl-12" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
                       <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
                         <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">其它關鍵字 (選填)</p>
-                        <?php d_textarea($person->Hashtag_other, "Hashtag_other"); ?>
+                        <?php d_textarea($person->Hashtag_other, "hashtag_other"); ?>
                       </div>
                     </div>
                   </div>
@@ -159,13 +157,13 @@ function d_textarea($v, $t = "")
                     <div class="col-md-12 col-lg-12 col-xl-12" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
                       <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
                         <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">自我介紹</p>
-                        <?php d_textarea($person->Introduction, "Introduction"); ?>
+                        <?php d_textarea($person->Introduction, "self_intro"); ?>
                       </div>
                     </div>
                     <div class="col-md-12 col-lg-12 col-xl-12" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
                       <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">
                         <p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);">近三年內代表經歷 <br></p>
-                        <?php d_textarea($person->Experience, "Experience"); ?>
+                        <?php d_textarea($person->Experience, "experience"); ?>
                       </div>
                     </div>
                   </div>

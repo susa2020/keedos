@@ -47,7 +47,7 @@ check_logged_in();
                   <div class="box">
                       <div class="row">
                           <div class="col" style="padding-right: 0px;padding-left: 0px;">
-                              <form style="border-style: none;"><img class="rounded-circle img-fluid" src="assets/img/1.jpg" loading="lazy" style="padding: 10px;padding-top: 20px;padding-bottom: 20px;width: 120px;">
+                              <form method="post" action="includes/edit-resume.inc.php" style="border-style: none;"><img class="rounded-circle img-fluid" src="assets/img/1.jpg" loading="lazy" style="padding: 10px;padding-top: 20px;padding-bottom: 20px;width: 120px;">
                                   <div class="container">
                                       <div class="form-row" style="margin-right: -5px;">
                                           <div class="col-sm-12 col-md-4 col-lg-8" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
