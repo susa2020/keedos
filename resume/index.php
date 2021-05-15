@@ -170,7 +170,31 @@ function d_textarea($v, $t = "")
                     </div>
                   </div>
                 </div>
-                
+                <?php
+                  require_once( $_SERVER['DOCUMENT_ROOT'].'/file_dir_config.php' );
+                  require( DIR_EASYCRUD.'ResumeOwner.class.php' );
+                  $owner = new ResumeOwner();
+                  $owner->resume_id = $resumeID;
+                  $owner->Find();
+                  echo "resume_id:".$resumeID.'<br>';
+                  echo "owner user id:".$owner->user_id.'<br>';
+                  if ($_SESSION['id'] == ($owner->user_id)) {
+                    echo "you are owner";
+                    echo '<div class="container">
+                      <div class="form-row">
+                        <div class="col-1 col-md-4"></div>
+                        <div class="col-10 col-md-4">
+                          <div class="form-group">
+                          <a class="btn btn-primary btn-block border rounded-pill create-account" role="button" href="edit/?id=' .$resumeID. '" style="border-color: rgb(157,162,173);background: rgb(157,162,173);">編輯</a></div>
+                        </div>
+                        <div class="col-1 col-md-4"></div>
+                      </div>
+                    </div>';
+                  }
+
+
+                ?>
+
               </form>
             </div>
           </div>

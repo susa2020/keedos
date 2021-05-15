@@ -7,7 +7,7 @@
 			protected $table = 'resume_owner';
 
 			# Primary Key of the Table
-			protected $pk	 = 'id';
+			protected $pk	 = 'resume_id';
 	}
 
 ?>

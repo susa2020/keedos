@@ -28,7 +28,7 @@ function d_textarea($v, $t = "")
 {
 
    //echo '<p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);" >' . $v. '</p>';
-   echo '<textarea class="form-control" value="' .$v. '" name=' .$t. ' style="border-style: none;height: 100px;text-align: left;" spellcheck="true" ></textarea>';
+   echo '<textarea class="form-control" name=' .$t. ' style="border-style: none;height: 100px;text-align: left;" spellcheck="true" >' .$v. '</textarea>';
 }
 ?>
 
