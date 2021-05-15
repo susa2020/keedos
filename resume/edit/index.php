@@ -28,7 +28,7 @@ function d_textarea($v, $t = "")
 {
 
    //echo '<p style="margin-bottom: 0px;text-align: left;padding-left: 15px;border-radius: 16px;color: rgb(110,113,145);" >' . $v. '</p>';
-   echo '<textarea class="form-control" value="' . $v. ' name='.$t . ' style="border-style: none;height: 100px;text-align: left;" name="hashtag_else" spellcheck="true" required=""></textarea>';
+   echo '<textarea class="form-control" value="' .$v. '" name=' .$t. ' style="border-style: none;height: 100px;text-align: left;" spellcheck="true" ></textarea>';
 }
 ?>
 
@@ -42,6 +42,8 @@ function d_textarea($v, $t = "")
             <div class="col" style="padding-right: 0px;padding-left: 0px;">
               <form method="post" action="includes/edit-resume.inc.php" style="border-style: none;"><img class="rounded-circle img-fluid" src="../../assets/img/1.jpg" loading="lazy" style="padding: 10px;padding-top: 20px;padding-bottom: 20px;width: 120px;">
                 <div class="container">
+                  <?php echo '<input type="hidden" name="id" value="' . $resumeID . '" />';  ?>
+
                   <div class="form-row" style="margin-right: -5px;">
                     <div class="col-sm-12 col-md-4 col-lg-8" style="border-top-left-radius: 1000;border-style: none;padding: 10px;padding-bottom: 10px;">
                       <div class="form-group" style="margin-bottom: 0px;background: rgb(239, 241, 246);border-radius: 16px;">

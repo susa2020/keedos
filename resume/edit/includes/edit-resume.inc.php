@@ -42,6 +42,7 @@ require '../../../assets/includes/security_functions.php';
 
     //require '../../assets/setup/db.inc.php';
     require("../../../assets/vendor/PHPDatabase/easyCRUD/Person.class.php");
+    $id = $_POST['id'];
     $name = $_POST['name'];
     $gender = $_POST['gender'];
     $age = $_POST['age'];
@@ -66,7 +67,8 @@ require '../../../assets/includes/security_functions.php';
     // Instantiate the person class
     $person  = new Person();
 
-    // Create new person
+    // Update Person Info
+    $person->id = $id;
     $person->Name = $name;
     $person->Gender = $gender;
     $person->Hashtag1 = $hashtag1;
@@ -85,27 +87,12 @@ require '../../../assets/includes/security_functions.php';
     $person->Location = $location;
     $person->Introduction = $self_intro;
     $person->Experience = $experience;
-    $creation = $person->Create();
+    $saved = $person->Save();
 
 
 
-    $last_id = $person->lastInsertId();
-    echo "Records inserted successfully. Last inserted ID is: " . $last_id;
 
-    //$last_id = mysqli_insert_id($link);
-    //$db->query("SELECT LAST_INSERT_ID 'resume'" );
-    //echo $resume_id;
-
-    require("../../../assets/vendor/PHPDatabase/easyCRUD/ResumeOwner.class.php");
-    $owner = new ResumeOwner();
-
-    $owner->user_id =$_SESSION['id'];
-    $owner->resume_id = $last_id;
-    $creation = $owner->Create();
-    //echo "user_id: " . $_SESSION['id'];
-
-
-    header("Location: ../../../resume/?id=".$last_id);
+    header("Location: /resume/?id=".$id);
 
 
 

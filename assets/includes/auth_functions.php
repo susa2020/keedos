@@ -8,7 +8,7 @@ function check_logged_in() {
     }
     else {
 
-        header("Location: ../login/");
+        header("Location: /login/");
         ob_end_flush();//防止Headers already sent
         exit();
     }
@@ -134,7 +134,7 @@ function check_remember_me() {
 
 
     //require '../assets/setup/db.inc.php';
-    require( $_SERVER['DOCUMENT_ROOT'].'/file_dir_config.php' );
+    require_once( $_SERVER['DOCUMENT_ROOT'].'/file_dir_config.php' );
     include( DIR_SETUP . 'db.inc.php' );
 
     if (empty($_SESSION['auth']) && !empty($_COOKIE['rememberme'])) {

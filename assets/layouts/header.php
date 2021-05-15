@@ -2,8 +2,8 @@
 
 session_start();
 
-include '../../file_dir_config.php' ;
-//require( $_SERVER['DOCUMENT_ROOT'].'/file_dir_config.php' );
+//include '../../file_dir_config.php' ;
+require_once( $_SERVER['DOCUMENT_ROOT'].'/file_dir_config.php' );
 include( DIR_SETUP . 'env.php' );
 include( DIR_SETUP . 'db.inc.php' );
 include( DIR_INCLUDES . 'auth_functions.php' );

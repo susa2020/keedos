@@ -170,15 +170,7 @@ function d_textarea($v, $t = "")
                     </div>
                   </div>
                 </div>
-                <div class="container">
-                  <div class="form-row">
-                    <div class="col-1 col-md-4"></div>
-                    <div class="col-10 col-md-4">
-                      <div class="form-group"><button class="btn btn-primary btn-block border rounded-pill create-account" type="submit" style="border-color: rgb(157,162,173);background: rgb(157,162,173);">儲存</button></div>
-                    </div>
-                    <div class="col-1 col-md-4"></div>
-                  </div>
-                </div>
+                
               </form>
             </div>
           </div>
