@@ -63,7 +63,7 @@ $DS = DIRECTORY_SEPARATOR;
         <div class="collapse navbar-collapse" id="navcol-1">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link active about" style="color: #18191f;font-size: 14px;width: 90px;padding: 0px;padding-top: 12px;font-family: FakePearl;" href="../about-susa">About SUSA</a></li>
-            <li class="nav-item working"><a class="nav-link working" style="color: #18191f;font-size: 15px;padding: 0px;width: 70px;font-family: FakePearl;" href="../index#how-to-use">運作方式</a></li>
+            <li class="nav-item working"><a class="nav-link working" style="color: #18191f;font-size: 15px;padding: 0px;width: 70px;font-family: FakePearl;" href="/#how-to-use">運作方式</a></li>
           </ul><span class="ml-auto navbar-text actions">
 
             <?php //include '../../search.php'; ?>

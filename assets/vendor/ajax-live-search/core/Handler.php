@@ -343,7 +343,7 @@ class Handler
             'total_pages'       => $pagesNumber,
         ];
     }
-
+    
     /**
      * @param $dbInfo
      * @param $query
@@ -395,7 +395,7 @@ class Handler
             'total_pages' => $pagesNumber,
         ];
     }
-
+    
     /**
      * @return string
      */
