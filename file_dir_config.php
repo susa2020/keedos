@@ -8,3 +8,4 @@ define('VIEW_FOOTER',   DIR_LAYOUTS . 'footer.php');
 define('DIR_INCLUDES',   DIR_ASSETS . 'includes/');
 define('DIR_VENDOR',   DIR_ASSETS . 'vendor/');
 define('DIR_EASYCRUD',   DIR_VENDOR . 'PHPDatabase/easyCRUD/');
+define('DIR_SEARCH',   DIR_VENDOR . 'ajax-live-search/core/');
