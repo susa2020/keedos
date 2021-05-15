@@ -2,7 +2,7 @@
 ob_start();
 define('TITLE', "edit resume");
 
-require( '../../file_dir_config.php' );
+require( $_SERVER['DOCUMENT_ROOT'].'/file_dir_config.php' );
 include( VIEW_HEADER );
 //include '/assets/layouts/header.php';
 require("../../assets/vendor/PHPDatabase/easyCRUD/Person.class.php");

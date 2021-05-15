@@ -133,7 +133,9 @@ function check_remember_me() {
 
 
 
-    require '../assets/setup/db.inc.php';
+    //require '../assets/setup/db.inc.php';
+    require( $_SERVER['DOCUMENT_ROOT'].'/file_dir_config.php' );
+    include( DIR_SETUP . 'db.inc.php' );
 
     if (empty($_SESSION['auth']) && !empty($_COOKIE['rememberme'])) {
 

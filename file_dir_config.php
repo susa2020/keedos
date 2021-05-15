@@ -1,5 +1,5 @@
 <?php
-define('DIR_BASE',      dirname( dirname( __FILE__ ) ) . '/');
+define('DIR_BASE',      $_SERVER['DOCUMENT_ROOT'] . '/');
 define('DIR_ASSETS',    DIR_BASE . 'assets/');
 define('DIR_SETUP',     DIR_ASSETS . 'setup/');
 define('DIR_LAYOUTS',   DIR_ASSETS . 'layouts/');
