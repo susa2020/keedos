@@ -7,16 +7,16 @@
 /* Beginning of result div and table */
 .ls_result_div
 {
-    position: absolute;
+    /*position: absolute;*/
     background-color: white;
     font-size: 17px;
     display: none;
     margin: 0 auto;
     max-width: 100%;
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -o-border-radius: 4px;
+    border-radius: 16px;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -o-border-radius: 16px;
     border: 1px solid #DDD;
     z-index: 1001;
 }
@@ -47,10 +47,10 @@
 
 .ls_result_div table tr:first-child td:first-child
 {
-    border-radius: 4px 0px 0px 0px;
-    -moz-border-radius: 4px 0px 0px 0px;
-    -webkit-border-radius: 4px 0px 0px 0px;
-    -o-border-radius: 4px 0px 0px 0px;
+    border-radius: 16px 0px 0px 0px;
+    -moz-border-radius: 16px 0px 0px 0px;
+    -webkit-border-radius: 16px 0px 0px 0px;
+    -o-border-radius: 16px 0px 0px 0px;
 }
 
 .ls_result_div table tr:first-child td:last-child
@@ -88,10 +88,10 @@
 
 .ls_result_footer
 {
-    border-radius: 0px 0px 4px 4px;
-    -moz-border-radius: 0px 0px 4px 4px;
-    -webkit-border-radius: 0px 0px 4px 4px;
-    -o-border-radius: 0px 0px 4px 4px;
+    border-radius: 0px 0px 4px 4px ;
+    -moz-border-radius: 0px 0px 4px 4px ;
+    -webkit-border-radius: 0px 0px 4px 4px ;
+    -o-border-radius: 0px 0px 4px 4px ;
     border-top: 1px solid #DDD;
     height: 40px;
 }
@@ -127,7 +127,7 @@
 {
     float: left;
     position: relative;
-    width: 24%;
+    width: 24% !important;
 }
 
 .arrow
@@ -157,10 +157,10 @@
 
 .border_radius
 {
-    border-radius: 4px !important;
-    -moz-border-radius: 4px !important;
-    -webkit-border-radius: 4px !important;
-    -o-border-radius: 4px !important;
+    border-radius: 16px !important;
+    -moz-border-radius: 16px !important;
+    -webkit-border-radius: 16px !important;
+    -o-border-radius: 16px !important;
 }
 /* End of result div and table */
 
@@ -168,7 +168,7 @@
 .ajax_loader
 {
     background-size: 25px;
-    background-image: url('../img/green_loader.gif');
+    background-image: url('/assets/vendor/ajax-live-search/img/green_loader.gif');
     background-repeat: no-repeat;
     background-position: 98% 46%;
 }

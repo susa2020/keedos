@@ -1,0 +1,3 @@
+Time : 06:21:55
+SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xF0\x9F\x91\x8B ' for column `klik_loginsystem`.`resume`.`Introduction` at row 1
+Raw SQL : UPDATE resume SET Name = :Name,Gender = :Gender,Hashtag1 = :Hashtag1,Hashtag2 = :Hashtag2,Hashtag3 = :Hashtag3,Hashtag_other = :Hashtag_other,Keyword_search = :Keyword_search,Age = :Age,Job_title = :Job_title,Work_way = :Work_way,Email = :Email,Social_Media = :Social_Media,Phone = :Phone,Pro_link = :Pro_link,If_other_org = :If_other_org,Location = :Location,Introduction = :Introduction,Experience = :Experience WHERE id= :id
