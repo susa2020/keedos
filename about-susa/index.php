@@ -131,7 +131,7 @@ include '../assets/layouts/header.php';
   <div id="back-keedos" style="background: #eef4f7;">
       <div class="container">
           <div class="row justify-content-center align-items-center">
-              <div class="col-md-4"><a class="btn btn-primary btn-block btn-lg" role="button" style="border-radius: 8px;" href="../index">Back to Keedos</a></div>
+              <div class="col-md-4"><a class="btn btn-primary btn-block btn-lg" role="button" style="border-radius: 8px;" href="/">Back to Keedos</a></div>
           </div>
       </div>
   </div>

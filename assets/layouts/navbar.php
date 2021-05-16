@@ -74,7 +74,7 @@ $DS = DIRECTORY_SEPARATOR;
             <a class="btn btn-light action-button" role="button" href="../register">註冊</a>
 
              <?php }else{ ?>
-            <a class="login" href="../search.php">搜尋</a>
+            <a class="login" href="../search">搜尋</a>
             <a class="login" href="../dev_link">測試</a>
             <a class="login" href="../login">後台</a>
             <a class="btn btn-light action-button" role="button" href="../logout">登出</a>

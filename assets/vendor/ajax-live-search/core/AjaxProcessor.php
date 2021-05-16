@@ -6,8 +6,10 @@ header('Access-Control-Allow-Origin: http://ajaxlivesearch.com');
 header('Access-Control-Allow-Methods: *');
 header('Content-Type: application/json');
 
-$DS = DIRECTORY_SEPARATOR;
-file_exists(__DIR__ . $DS . 'Handler.php') ? require_once __DIR__ . $DS . 'Handler.php' : die('Handler.php not found');
+require( $_SERVER['DOCUMENT_ROOT'].'/file_dir_config.php' );
+require_once( DIR_SEARCH.'core/Handler.php' );
+//$DS = DIRECTORY_SEPARATOR;
+//file_exists(__DIR__ . $DS . 'Handler.php') ? require_once __DIR__ . $DS . 'Handler.php' : die('Handler.php not found');
 
 /**
  * Class AjaxProcessor

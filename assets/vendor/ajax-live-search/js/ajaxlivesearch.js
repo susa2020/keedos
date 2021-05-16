@@ -17,7 +17,7 @@
          */
 
         var ls = {
-            url: "core/AjaxProcessor.php",
+            url: "/assets/vendor/ajax-live-search/core/AjaxProcessor.php",
             // This should be the same as the same parameter's value in config file
             form_anti_bot: "ajaxlivesearch_guard",
             cache: false,

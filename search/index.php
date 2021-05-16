@@ -1,8 +1,8 @@
 <?php
 
 require( $_SERVER['DOCUMENT_ROOT'].'/file_dir_config.php' );
-require_once( DIR_SEARCH.'Handler.php' );
-require_once( DIR_SEARCH.'Config.php' );
+require_once( DIR_SEARCH.'core/Handler.php' );
+require_once( DIR_SEARCH.'core/Config.php' );
 //$DS = DIRECTORY_SEPARATOR;
 //file_exists(__DIR__ . $DS . 'core' . $DS . 'Handler.php') ? require_once __DIR__ . $DS . 'core' . $DS . 'Handler.php' : die('Handler.php not found');
 //file_exists(__DIR__ . $DS . 'core' . $DS . 'Config.php') ? require_once __DIR__ . $DS . 'core' . $DS . 'Config.php' : die('Config.php not found');
@@ -21,7 +21,7 @@ if (session_id() == '') {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="description"
@@ -33,12 +33,12 @@ if (session_id() == '') {
     <title>AJAX Live Search</title>
 
     <!-- Live Search Styles -->
-    <link rel="stylesheet" href="css/fontello.css">
-    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="/assets/vendor/ajax-live-search/css/fontello.css">
+    <link rel="stylesheet" href="/assets/vendor/ajax-live-search/css/animation.css">
     <!--[if IE 7]>
     <link rel="stylesheet" href="css/fontello-ie7.css">
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="css/ajaxlivesearch.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/ajax-live-search/css/ajaxlivesearch.min.css">
 </head>
 <body>
 
@@ -49,10 +49,10 @@ if (session_id() == '') {
 <!-- /Search Form Demo -->
 
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery-1.11.1.min.js"></script>
+<script src="/assets/vendor/ajax-live-search/js/jquery-1.11.1.min.js"></script>
 
 <!-- Live Search Script -->
-<script type="text/javascript" src="js/ajaxlivesearch.min.js"></script>
+<script type="text/javascript" src="/assets/vendor/ajax-live-search/js/ajaxlivesearch.js"></script>
 
 <script>
 jQuery(document).ready(function(){
@@ -69,6 +69,7 @@ jQuery(document).ready(function(){
 
             // hide the result
             jQuery("#ls_query").trigger('ajaxlivesearch:hide_result');
+            window.location.href="../resume/?id="+selectedOne;
         },
         onResultEnter: function(e, data) {
             // do whatever you want

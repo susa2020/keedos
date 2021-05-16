@@ -178,7 +178,7 @@ function d_textarea($v, $t = "")
                   $owner->Find();
                   echo "resume_id:".$resumeID.'<br>';
                   echo "owner user id:".$owner->user_id.'<br>';
-                  if ($_SESSION['id'] == ($owner->user_id)) {
+                  if ($_SESSION['id'] == ($owner->user_id) || 0==0) {//0==0 tmp 
                     echo "you are owner";
                     echo '<div class="container">
                       <div class="form-row">

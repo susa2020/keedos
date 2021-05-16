@@ -2,9 +2,12 @@
 
 namespace AjaxLiveSearch\core;
 
-$DS = DIRECTORY_SEPARATOR;
-file_exists(__DIR__ . $DS . 'DB.php') ? require_once __DIR__ . $DS . 'DB.php' : die('DB.php not found');
-file_exists(__DIR__ . $DS . 'Config.php') ? require_once __DIR__ . $DS . 'Config.php' : die('Config.php not found');
+require( $_SERVER['DOCUMENT_ROOT'].'/file_dir_config.php' );
+require_once( DIR_SEARCH.'core/DB.php' );
+require_once( DIR_SEARCH.'core/Config.php' );
+//$DS = DIRECTORY_SEPARATOR;
+//file_exists(__DIR__ . $DS . 'DB.php') ? require_once __DIR__ . $DS . 'DB.php' : die('DB.php not found');
+//file_exists(__DIR__ . $DS . 'Config.php') ? require_once __DIR__ . $DS . 'Config.php' : die('Config.php not found');
 
 if (count(get_included_files()) === 1) {
     exit('Direct access not permitted.');
@@ -343,7 +346,7 @@ class Handler
             'total_pages'       => $pagesNumber,
         ];
     }
-    
+
     /**
      * @param $dbInfo
      * @param $query
@@ -395,7 +398,7 @@ class Handler
             'total_pages' => $pagesNumber,
         ];
     }
-    
+
     /**
      * @return string
      */
