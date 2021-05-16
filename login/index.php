@@ -39,7 +39,7 @@ check_logged_out();
             </small>
 
             <div class="form-group">
-              <input class="form-control" type="text" id="username" name="username" placeholder="帳號" autofocus="" style="border-radius: 16px;font-family: FakePearl-Regular;">
+              <input class="form-control" type="text" id="username" name="username" placeholder="帳號或Email" autofocus="" style="border-radius: 16px;font-family: FakePearl-Regular;">
               <sub class="text-danger">
                   <?php
                       if (isset($_SESSION['ERRORS']['nouser']))

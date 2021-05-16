@@ -40,7 +40,7 @@ else {
         exit();
     }
 
-    
+
     require '../../assets/setup/db.inc.php';
 
     $username = $_POST['username'];
@@ -51,7 +51,7 @@ else {
         $_SESSION['STATUS']['loginstatus'] = 'fields cannot be empty';
         header("Location: ../");
         exit();
-    } 
+    }
     else {
 
         /*
@@ -60,19 +60,40 @@ else {
         * -------------------------------------------------------------------------------
         */
 
-        $sql = "UPDATE users SET last_login_at=NOW() WHERE username=?;";
-        $stmt = mysqli_stmt_init($conn);
-        if (!mysqli_stmt_prepare($stmt, $sql)) {
+        if(strpos($username,'@') !== false){ //email login
+            $sql = "UPDATE users SET last_login_at=NOW() WHERE email=?;";
+            $stmt = mysqli_stmt_init($conn);
+            if (!mysqli_stmt_prepare($stmt, $sql)) {
 
-            $_SESSION['ERRORS']['sqlerror'] = 'SQL ERROR';
-            header("Location: ../");
-            exit();
-        }
-        else {
+                $_SESSION['ERRORS']['sqlerror'] = 'SQL ERROR';
+                header("Location: ../");
+                exit();
+            }
+            else {
+                
+                mysqli_stmt_bind_param($stmt, "s", $username);
+                mysqli_stmt_execute($stmt);
+            }
 
-            mysqli_stmt_bind_param($stmt, "s", $username);
-            mysqli_stmt_execute($stmt);
+        }else{//username login
+
+            $sql = "UPDATE users SET last_login_at=NOW() WHERE username=?;";
+            $stmt = mysqli_stmt_init($conn);
+            if (!mysqli_stmt_prepare($stmt, $sql)) {
+
+                $_SESSION['ERRORS']['sqlerror'] = 'SQL ERROR';
+                header("Location: ../");
+                exit();
+            }
+            else {
+
+                mysqli_stmt_bind_param($stmt, "s", $username);
+                mysqli_stmt_execute($stmt);
+            }
+
         }
+
+
 
 
 
@@ -82,7 +103,16 @@ else {
         * -------------------------------------------------------------------------------
         */
 
-        $sql = "SELECT * FROM users WHERE username=?;";
+        if(strpos($username,'@') !== false){ //email login
+            $sql = "SELECT * FROM users WHERE email=?;";
+
+        }else{//username login
+            $sql = "SELECT * FROM users WHERE username=?;";
+
+        }
+
+
+        //$sql = "SELECT * FROM users WHERE username=?;";
         $stmt = mysqli_stmt_init($conn);
 
         if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -90,7 +120,7 @@ else {
             $_SESSION['ERRORS']['scripterror'] = 'SQL ERROR';
             header("Location: ../");
             exit();
-        } 
+        }
         else {
 
             mysqli_stmt_bind_param($stmt, "s", $username);
@@ -107,12 +137,12 @@ else {
                     $_SESSION['ERRORS']['wrongpassword'] = 'wrong password';
                     header("Location: ../");
                     exit();
-                } 
+                }
                 else if ($pwdCheck == true) {
 
                     session_start();
 
-                    
+
                     if($row['verified_at'] != NULL){
 
                         $_SESSION['auth'] = 'verified';
@@ -174,7 +204,7 @@ else {
                             true  // http-only
                         );
 
-                        $sql = "INSERT INTO auth_tokens (user_email, auth_type, selector, token, expires_at) 
+                        $sql = "INSERT INTO auth_tokens (user_email, auth_type, selector, token, expires_at)
                                 VALUES (?, 'remember_me', ?, ?, ?);";
                         $stmt = mysqli_stmt_init($conn);
                         if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -184,7 +214,7 @@ else {
                             exit();
                         }
                         else {
-                            
+
                             $hashedToken = password_hash($token, PASSWORD_DEFAULT);
                             mysqli_stmt_bind_param($stmt, "ssss", $_SESSION['email'], $selector, $hashedToken, date('Y-m-d\TH:i:s', time() + 864000));
                             mysqli_stmt_execute($stmt);
@@ -193,12 +223,12 @@ else {
 
                     header("Location: ../../home/");
                     exit();
-                } 
-            } 
+                }
+            }
             else {
 
                 $_SESSION['ERRORS']['nouser'] = 'username does not exist';
-                header("Location: ../");
+                //header("Location: ../");
                 exit();
             }
         }
