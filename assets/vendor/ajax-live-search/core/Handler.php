@@ -2,7 +2,7 @@
 
 namespace AjaxLiveSearch\core;
 
-require( $_SERVER['DOCUMENT_ROOT'].'/file_dir_config.php' );
+require_once( $_SERVER['DOCUMENT_ROOT'].'/file_dir_config.php' );
 require_once( DIR_SEARCH.'core/DB.php' );
 require_once( DIR_SEARCH.'core/Config.php' );
 //$DS = DIRECTORY_SEPARATOR;
