@@ -16,34 +16,7 @@ if (session_id() == '') {
     $handler->getJavascriptAntiBot();
 
 $search_question = $_POST['q'];
-echo '<input type="hidden" name="question" class="search" value="'.$search_question.'">' ;
-echo "
-<script>
-jQuery(document).ready(function(){
-    jQuery(".search").ajaxlivesearch({";
-        loaded_at: <?php echo time(); ?>,
-        token: <?php echo "'" . $handler->getToken() . "'"; ?>,
-        max_input: <?php echo Config::getConfig('maxInputLength'); ?>,
-        onResultClick: function(e, data) {
-            // get the index 0 (first column) value
-            var selectedOne = jQuery(data.selected).find('td').eq('0').text();
 
-            // set the input value
-            jQuery('#ls_query').val(selectedOne);
-
-            // hide the result
-            jQuery("#ls_query").trigger('ajaxlivesearch:hide_result');
-        },
-        onResultEnter: function(e, data) {
-            // do whatever you want
-            // jQuery("#ls_query").trigger('ajaxlivesearch:search', {query: 'test'});
-        },
-        onAjaxComplete: function(e, data) {
-
-        }
-    });
-})
-</script>
 
 ?>
 <!DOCTYPE html>
@@ -72,7 +45,7 @@ jQuery(document).ready(function(){
                 <div class="form-row">
                     <div class="col-9 col-sm-10 col-md-10 col-lg-10 col-xl-10" style="padding-left: 0;padding-right: 0;margin-right: 10px;">
                         <div class="form-group col-sm" style="padding-right: 0;padding-left: 0;">
-                          <input class="form-control" type="search"  id="ls_query" autofocus="" name="q" style="margin-right: 10px;"></div>
+                          <input class="form-control" type="search"  id="ls_query" autofocus="" name="q" value="d" style="margin-right: 10px;"></div>
                     </div>
                     <div class="col-2 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="padding-left: 5px;padding-right: px;margin-right: 0px;">
                         <div class="form-group col-sm-auto text-right" style="padding-right: 0;padding-left: 0;"><button class="btn btn-primary btn-block" type="submit" style="text-align: center;border-radius: 40px;font-family: Poppins;background: #f08b33;font-family: Poppins;font-style: normal;font-weight: 600;font-size: 14px;line-height: 24px;align-items: center;text-align: center;letter-spacing: 0.75px;color: #ffffff;width: 60px;height: 40px;"><i class="fa fa-search"></i></button></div>
@@ -84,6 +57,44 @@ jQuery(document).ready(function(){
     <script src="/assets/js/SBWP-Search-Bar-With-Parameters.js"></script>
     <script src="/assets/vendor/ajax-live-search/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="/assets/vendor/ajax-live-search/js/ajaxlivesearch.js"></script>
+
+<?php
+echo '<input type="hidden" name="question" class="search" value="'.$search_question.'">' ;
+echo "
+<script>
+jQuery(document).ready(function(){
+    jQuery(".search").ajaxlivesearch({ ";
+      echo "  loaded_at:" <?php echo time(); ?>,
+      echo "  token:" <?php echo "'" . $handler->getToken() . "'"; ?>,
+      echo "  max_input:" <?php echo Config::getConfig('maxInputLength'); ?>,
+        echo ' onResultClick: function(e, data) {
+            // get the index 0 (first column) value
+            var selectedOne = jQuery(data.selected).find('td').eq('0').text();
+
+            // set the input value
+            jQuery("#ls_query").val(selectedOne);
+
+            // hide the result
+            jQuery("#ls_query").trigger('ajaxlivesearch:hide_result');
+        },
+        onResultEnter: function(e, data) {
+            // do whatever you want
+            // jQuery("#ls_query").trigger('ajaxlivesearch:search', {query: 'test'});
+        },
+        onAjaxComplete: function(e, data) {
+
+        }
+    });
+})
+</script> ';
+
+
+
+
+
+  ?>
+
+
     <script>
     jQuery(document).ready(function(){
         jQuery(".form-control").ajaxlivesearch({
