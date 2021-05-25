@@ -315,7 +315,7 @@ body {
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-5 col-sm-3 col-md-3 col-lg-3 offset-xl-0"><a class="btn btn-primary text-center" role="button" id="title-button" href="{{ url }}" style="font-family: Poppins, sans-serif;">驗證信箱<br></a></div>
+                        <div class="col-5 col-sm-3 col-md-3 col-lg-3 offset-xl-0"><a class="btn btn-primary text-center" role="button" id="title-button" href="" style="font-family: Poppins, sans-serif;">驗證信箱<br></a></div>
                     </div>
                 </div>
                 <p class="lead" style="text-align: center;"><br>© 2021 Keedos. Team 保留一切權利<br> 還有任何疑問嗎？ 現在就聯絡我們！<br><br></p>

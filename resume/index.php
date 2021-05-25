@@ -178,7 +178,7 @@ function d_textarea($v, $t = "")
                   $owner->Find();
                   echo "resume_id:".$resumeID.'<br>';
                   echo "owner user id:".$owner->user_id.'<br>';
-                  if ($_SESSION['id'] == ($owner->user_id) || 0==0) {//0==0 tmp 
+                  if ($_SESSION['id'] == ($owner->user_id) || 0==0) {//0==0 tmp
                     echo "you are owner";
                     echo '<div class="container">
                       <div class="form-row">
@@ -203,5 +203,23 @@ function d_textarea($v, $t = "")
     </div>
   </div>
 </section>
+
+<form action="includes/sendverificationemail.inc.php" method="post">
+
+    <?php insert_csrf_token(); ?>
+    <p>寄信測試
+        <button type="submit" name="verifysubmit">click here</button>.
+    </p>
+    <br>
+    <div class="text-center mt-5">
+        <h6 class="text-success">
+            <?php
+                if (isset($_SESSION['STATUS']['verify']))
+                    echo $_SESSION['STATUS']['verify'];
+            ?>
+        </h6>
+    </div>
+
+</form>
 
 </html>
