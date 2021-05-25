@@ -1,0 +1,75 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.anone {
+  color: inherit;
+}
+
+.anone:link {
+  text-decoration: none;
+}
+
+.anone:visited {
+  color: inherit;
+}
+
+.anone:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.anone:active {
+  color: inherit;
+}
+
+@media only screen and (min-width: 1200px) {
+  .labels {
+    font-size: 1.1em;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .labels {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 768px ) and (max-width: 991px) {
+  .labels {
+    font-size: .95em;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .labels {
+    font-size: .85em;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .labels {
+    font-size: .85em;
+  }
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+

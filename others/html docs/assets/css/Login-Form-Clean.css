@@ -1,0 +1,64 @@
+.login-clean {
+  background: #f1f7fc;
+  padding: 80px 0;
+}
+
+.login-clean form {
+  max-width: 320px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 4px;
+}
+
+.login-clean .illustration {
+  padding: 5px;
+  text-align: center;
+  font-family: Poppins;
+  color: 14142B;
+  font-size: 32px;
+  padding-bottom: 30px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.login-clean form .btn-primary {
+  background: #f08b33;
+  border: none;
+  border-radius: 4px;
+  padding: 11px;
+  box-shadow: none;
+  margin-top: 26px;
+  text-shadow: none;
+  outline: none !important;
+}
+
+.login-clean form .btn-primary:hover, .login-clean form .btn-primary:active {
+  background: #f08b33;
+}
+
+.login-clean form .btn-primary:active {
+  transform: translateY(1px);
+}
+
+.login-clean form .forgot {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #6f7a85;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.login-clean form .forgot:hover, .login-clean form .forgot:active {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.navbar-brand {
+}
+
+.navbar.navbar-light.navbar-expand-md {
+}
+

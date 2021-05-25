@@ -1,0 +1,247 @@
+.team-boxed {
+  color: #313437;
+  background-color: #eef4f7;
+}
+
+.team-boxed p {
+  color: #7d8285;
+}
+
+@media (min-width: 767px) {
+  .team-boxed h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    color: inherit;
+    font-size: 40px;
+  }
+}
+
+@media (max-width:767px) {
+  .team-boxed h2 {
+    margin-bottom: 25px;
+    padding-top: 25px;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 300px) {
+  .team-boxed .intro {
+    font-size: 16px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 434px) {
+  .team-boxed .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 767px) {
+  .team-boxed .intro p {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-family: FakePearl;
+    color: #6b737b;
+    font-weight: normal;
+  }
+}
+
+@media (max-width: 767px) {
+  .team-boxed .intro p {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-family: FakePearl;
+    font-weight: normal;
+  }
+}
+
+@media (max-width: 767px) {
+  .team-boxed .people-first {
+    padding: 50px 0px 0px 0px;
+  }
+}
+
+@media (min-width: 767px) {
+  .team-boxed .people-first, .people {
+    padding-right: 0px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 0px;
+  }
+}
+
+.team-boxed .item-first {
+  text-align: center;
+}
+
+.team-boxed .item {
+  text-align: center;
+}
+
+.team-boxed .item .box {
+  text-align: center;
+  padding: 30px;
+  background-color: #fff;
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+
+.team-boxed .item .name {
+  font-weight: bold;
+  margin-top: 28px;
+  margin-bottom: 8px;
+  color: inherit;
+}
+
+.team-boxed .item .title {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #d0d0d0;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.team-boxed .item .description {
+  font-size: 15px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.team-boxed .item img {
+  max-width: 160px;
+}
+
+.team-boxed .social {
+  font-size: 18px;
+  color: #a2a8ae;
+}
+
+.team-boxed .social a {
+  color: inherit;
+  margin: 0 10px;
+  display: inline-block;
+  opacity: 0.7;
+}
+
+.team-boxed .social a:hover {
+  opacity: 1;
+}
+
+@media (min-width: 767px) {
+  .container.intro-container {
+    width: 60%;
+    height: 500px;
+    text-align: center;
+    padding: 100px;
+  }
+}
+
+@media (min-width: 434px) {
+  .container.intro-container {
+    width: 80%;
+    height: 425px;
+    text-align: center;
+    padding: 80px 20px;
+  }
+}
+
+@media (max-width: 434px) {
+  .container.intro-container {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    padding: 80px 0px;
+  }
+}
+
+@media (min-width: 767px) {
+  .intro-container p {
+    font-family: FakePearl;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: normal;
+  }
+}
+
+@media (max-width: 767px) {
+  .intro-container p {
+    font-family: FakePearl;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: normal;
+  }
+}
+
+@media (min-width: 767px) {
+  .intro-container h1 {
+    font-weight: bolder;
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .intro-container h1 {
+    font-weight: bolder;
+    margin-bottom: 40px;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 767px) {
+  #team-boxed .intro {
+    width: 60%;
+  }
+}
+
+@media (max-width: 767px) {
+  #team-boxed .intro {
+    width: 80%;
+  }
+}
+
+@media (min-width: 767px) {
+  .susa-banner {
+    background: url("../../assets/img/logowhole.svg") center / auto no-repeat;
+    height: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .susa-banner {
+    background: url("../../assets/img/logowhole.svg") center / contain no-repeat;
+    height: 300px;
+  }
+}
+
+#intro {
+  background: #f2d9b5;
+}
+
+#back-keedos {
+  padding: 50px;
+}
+
+#back-keedos .btn.btn-primary.btn-block {
+  background: #f08b33;
+  font-size: 15px;
+}
+
+@media (max-width: 434px) {
+  #intro {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 767px) {
+  .people-first .col-md-6.col-lg-4.item {
+    margin-top: 30px;
+  }
+}
+

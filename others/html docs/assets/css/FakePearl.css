@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'FakePearl';
+	src: url(../../assets/fonts/FakePearl-Regular.woff2) format('woff2'),
+	url(../../assets/fonts/FakePearl-Regular.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

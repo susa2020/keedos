@@ -1,0 +1,117 @@
+.resume-banner {
+  width: 100%;
+  height: 300px;
+}
+
+.resume-banner-name {
+  height: 300px;
+  width: 50%;
+  background-color: rgb(242,173,40);
+  float: left;
+}
+
+.resume-banner-status {
+  width: 50%;
+  height: 300px;
+  background-color: red;
+  float: right;
+}
+
+.resume-banner-name h1 {
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 300px;
+  text-align: center;
+}
+
+.resume-banner-status .container {
+  width: 30%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.resume-banner-status h1 {
+  font-size: 14px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+}
+
+.resume-banner-status p {
+  font-size: 14px;
+  font-family: 'Poppins';
+  padding-left: 36.75px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.resume-banner-status .fa.fa-circle {
+  margin-right: 22.75px;
+  color: #00BA88;
+}
+
+.resume-form {
+  padding: 100px 0;
+  width: 70%;
+}
+
+.resume-form form {
+  width: 100%;
+  padding: 50px 70px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.resume-form form h3 {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.resume-form .item {
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding: 10px 20px;
+}
+
+.resume-form .create-account {
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #3f93ff;
+  border: none;
+  color: white;
+  margin-top: 20px;
+}
+
+@media (max-width: 576px) {
+  .resume-form form {
+    padding: 50px 20px;
+  }
+}
+
+.resume-section {
+  background-color: #EFF1F6;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.resume-form img {
+  max-width: 150px;
+  max-height: 150px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.resume-form form {
+  text-align: center;
+}
+

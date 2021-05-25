@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/Footer-Dark.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="assets/css/keedos-invite-email-draft.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
     <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
     <link rel="stylesheet" href="assets/css/resume-edit.css">
@@ -36,7 +37,7 @@
 
 <body>
     <section class="team-boxed" style="background: #eef4f7;">
-        <div class="container team">
+        <div class="container team" id="invite-body">
             <div class="col-md-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2 item" style="padding-top: 50px;">
                 <div class="box">
                     <div class="row">
@@ -44,12 +45,33 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 col-xl-12 offset-xl-0">
-                            <h1 class="name" style="text-align: left;"><strong>重置您的密碼</strong><br></h1>
-                            <p class="description" style="text-align: left;font-size: 18px;">忘記密碼真的是一件令人傷心的事情<br>我們非常抱歉為你的使用體驗帶來不便<br>還請您幫我們點擊下方按鈕以重置您的密碼，謝謝！<br><br>Best regards,<br>Keedos.<br><br></p>
+                            <h1 class="name" style="text-align: left;"><strong>嘿嘿,</strong><br><strong>有人好像對你有興趣喔！</strong><br></h1>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-5 col-sm-3 col-md-3 col-lg-3 offset-xl-0"><a class="btn btn-primary text-center" role="button" id="title-button" href="login.html" style="font-family: Poppins, sans-serif;">重置密碼<br></a></div>
+                        <div class="col" id="email-banner"><img class="img-fluid" src="assets/img/invite-email-banner.jpg"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12 offset-xl-0">
+                            <p class="description" style="text-align: left;font-size: 18px;">為你帶來一個好消息！那就是平台上的用戶 @tofus7.45 寄了一封邀請給你。期望和您一起開始一個超酷的專案！我們知道這個消息非常令人興奮，因此我們迫不及待地把這個消息透過電子信箱的方式寄送給您。為了不破壞那神聖的驚喜感，我們在下方為你準備了跳轉到他DM聊天室的傳送門，期望你可以盡快與他聯絡並了解更多專案相關細節，開始你們的冒險！<br><br></p>
+                        </div>
+                    </div>
+                    <div class="row" id="button">
+                        <div class="col" id="button-1"><button class="btn btn-primary" id="first-button" type="button">寄送一封Email給他</button>
+                            <p>（tofus7.45@gmail.com)</p>
+                        </div>
+                    </div>
+                    <div class="row" id="button">
+                        <div class="col" id="button-2"><button class="btn btn-primary" id="second-button" type="button">查看他的 Facebook Profile</button></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12 offset-xl-0" id="bottom-text">
+                            <p class="description" style="text-align: left;">你可以採取這些動作.......<br>1. 我想要更加了解/婉拒這個機會<br>&nbsp;&nbsp;點選上方"寄送一封Email給他"，並開始撰寫<br>2.遇到怪人ㄌQAQ......我想檢舉他<br>&nbsp; 請採取以下步驟:<br>&nbsp; 1) 請務必截圖存證<br>&nbsp; 2) 填寫"Keedos. 知識中心"的Feedback表單(並附上Username及截圖供我們查證)<br>&nbsp; 3) 如果還有更多問題的話，歡迎到 Keedos. 知識中心 裡了解更多訊息&nbsp;&nbsp; 亦或者是到裡面的Airtable表單直接向我們提供反饋<br></p>
+                        </div>
+                    </div>
+                    <div class="row" id="email-box">
+                        <div class="col-md-6"><a href="https://keedos.me/index/index.php"><img class="img-fluid" src="assets/img/invite-email-bottomleft.png"></a></div>
+                        <div class="col-md-6"><a href="https://www.instagram.com/susatw/"><img class="img-fluid" src="assets/img/invite-email-bottomright.png"></a></div>
                     </div>
                 </div>
                 <p class="lead" style="text-align: center;"><br>© 2021 Keedos. Team 保留一切權利<br> 還有任何疑問嗎？ 現在就聯絡我們！<br><br></p>
@@ -58,6 +80,7 @@
     </section>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
     <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
     <script src="assets/js/SBWP-Search-Bar-With-Parameters.js"></script>
 </body>
