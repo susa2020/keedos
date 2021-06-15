@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 require '../../assets/includes/auth_functions.php';
@@ -15,6 +14,10 @@ use PHPMailer\PHPMailer\Exception;
 require '../../assets/vendor/PHPMailer/src/Exception.php';
 require '../../assets/vendor/PHPMailer/src/PHPMailer.php';
 require '../../assets/vendor/PHPMailer/src/SMTP.php';
+
+$resumeID = $_GET["resume_id"];
+$resume_email = $_GET["resume_email"];
+$social_media = $_GET["Social_Media"];
 
 if (isset($_POST['verifysubmit'])) {
 
@@ -43,11 +46,13 @@ if (isset($_POST['verifysubmit'])) {
     }
 
 
-
-    $email = $_SESSION['email'];
-
+    $email = $resume_email;
+    $user_email = $_SESSION['email'];
+    $username = $_SESSION['username'];
+    $first_name = $_SESSION['first_name'];
+    $last_name = $_SESSION['last_name'];
     $to = $email;
-    $subject = 'Verify Your Account';
+    $subject = '嘿嘿,有人好像對你有興趣喔！| keedos';
 
     /*
     * -------------------------------------------------------------------------------
@@ -58,8 +63,12 @@ if (isset($_POST['verifysubmit'])) {
     $mail_variables = array();
 
     $mail_variables['APP_NAME'] = APP_NAME;
-    $mail_variables['email'] = $email;
-    $mail_variables['url'] = $url;
+    $mail_variables['user_email'] = $user_email;
+    $mail_variables['user_email_btn'] = 'mailto:'.$user_email;
+    $mail_variables['username'] = $username;
+    $mail_variables['first_name'] = $first_name;
+    $mail_variables['last_name'] = $last_name;
+    $mail_variables['Social_Media'] = $social_media;
 
     $message = file_get_contents("./template_verificationemail.php");
 
@@ -85,8 +94,11 @@ if (isset($_POST['verifysubmit'])) {
         $mail->addAddress($to, APP_NAME);
 
         $mail->isHTML(true);
-        $mail->Subject = $subject;
+        //$mail->Subject = $subject;
+        $mail->Subject = "=?UTF-8?B?".base64_encode($subject)."?=";  //主旨編碼成UTF-8
         $mail->Body    = $message;
+
+
 
         $mail->send();
     }
@@ -103,11 +115,11 @@ if (isset($_POST['verifysubmit'])) {
     }
 
     $_SESSION['STATUS']['verify'] = '成功寄出';
-    header("Location: ../");
+    header("Location: ../?id=".$resumeID);
     exit();
 }
 else {
 
-    header("Location: ../");
+    header("Location: ../?id=".$resumeID);
     exit();
 }

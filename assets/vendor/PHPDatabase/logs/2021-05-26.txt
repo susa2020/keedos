@@ -1,0 +1,3 @@
+Time : 15:00:01
+SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'Phone' at row 1
+Raw SQL : INSERT INTO resume (Name,Gender,Hashtag1,Hashtag2,Hashtag3,Hashtag_other,Keyword_search,Age,Job_title,Work_way,Email,Social_Media,Phone,Pro_link,If_other_org,Location,Introduction,Experience) VALUES (:Name,:Gender,:Hashtag1,:Hashtag2,:Hashtag3,:Hashtag_other,:Keyword_search,:Age,:Job_title,:Work_way,:Email,:Social_Media,:Phone,:Pro_link,:If_other_org,:Location,:Introduction,:Experience)
